@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<style>
-		.login_form {width: fit-content;margin:auto;padding:20px 10px;border: 1px solid red}
-		.form_row {margin: 15px 30px;padding:10px 5px; height:38px;width:250px;font-size:16px;display:block;}
-		</style>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<link rel="stylesheet" type="text/css" href="./login.css">
 	</head>
 	<body>
 		<div class="header">
@@ -20,6 +17,8 @@
 		<div class="login_form">
 			<input class="form_row" name="username" type="text" placeholder="Username" autocomplete="off">
 			<input class="form_row" name="password" type="password" placeholder="Password">
+			<input type="submit" value="Log in" class="submit_button">
+			<span class="sign_up_link">or <a href="#">Sign up</a></span>
 		</div>
 		<div class="footer"><a name="footer">
 			<div class="img" style="height: 200px;"></div>

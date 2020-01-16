@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>Parivartan Nepal</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<h1>Welcome to the weather appplication of Parivartan Nepal</h1>
-		<h2>Please log in to continue</h2>
+		<div class="header">
+			<h1>Parivartan Nepal</h1>
+		</div>
+		<div class="navbar">
+			<a href="#data">Data</a>
+			<a href="#map">Map</a>
+			<a href="#footer">Contact</a>
+		</div>
+		<div class="row">
+			<div class="side"><a name="data">
+				<h2>Data of selected spot</h2>
+				<div class="img" style="height: 200px;"></div>
+			</div>
+			<div class="main"><a name="map">
+				<div class="img" style="height: 200px;"></div>
+				<div class="img" style="height: 200px;"></div>
+				<div class="img" style="height: 200px;"></div>
+			</div>
+		</div>
+		<div class="footer"><a name="footer">
+			<div class="img" style="height: 200px;"></div>
+		</div>
 	</body>
-</html>

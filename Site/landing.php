@@ -19,7 +19,6 @@
 		</div>
 		<div class="footer">
 			Dit is de footer!
-			Test!
 		</div>
 	</body>
 </html>

@@ -5,7 +5,8 @@
 	</head>
 	<body>
 		<div class="header">
-			<h1>Parivartan Nepal</h1>
+			<img src="/res/img/logo.png" >
+
 		</div>
 		<div class="navbar">
 			<a href="#data">Data</a>

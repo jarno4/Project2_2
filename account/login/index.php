@@ -19,10 +19,18 @@
 	<input class="form_row" name="username" type="text" placeholder="Username" autocomplete="off">
 	<input class="form_row" name="password" type="password" placeholder="Password">
 	<input type="submit" value="Log in" class="submit_button">
-	<span class="sign_up_link">or <a href="#">Sign up</a></span>
+	<span class="sign_up_link">or <a href="/account/signup/">Sign up</a></span>
 </div>
 <div class="footer"><a name="footer">
 	<div class="img" style="height: 200px;"></div>
 </div>
+<script>
+    $(".submit_button").click(function(e) {
+        $.post("/account/ajax_handler.php", "qw=123", function(data) {
+            alert(data);
+        });
+        e.preventDefault(); //prevent default action
+    });
+	</script>
 </body>
 </html>

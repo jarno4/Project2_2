@@ -4,6 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="/res/style.css">
 	<link rel="stylesheet" type="text/css" href="/res/login.css">
 	<script src="/res/jquery-3.4.1.min.js"></script>
+
 </head>
 <body>
 <div class="header">
@@ -29,5 +30,6 @@
 <div class="footer"><a name="footer">
 	<div class="img" style="height: 200px;"></div>
 </div>
+
 </body>
 </html>

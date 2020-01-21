@@ -3,6 +3,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="/res/style.css">
 		<script type="text/javascript" src="/js/svg/svg.js" ></script>
+		<script type="text/javascript" src="/js/data/data.js" ></script>
 	</head>
 	<body>
 		<div class="header">
@@ -16,13 +17,59 @@
 		</div>
 		<div class="row">
 			<div class="side"><a name="data">
-				<h2>Data of selected spot</h2>
+				<script src="fp_footer2.js"></script>
+				<h2 id="sideheader"> Please select a province </h2>
+				<table id="datatable" class="table">
+					<thead>
+						<tr>
+	  						<th>Day</td>
+							<th>Tempature</th>
+							<th>Rainfall</th>
+							<th>Wind speed </th>
+							<th>Wind direction</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td> Monday </td>
+							<td> 12 </td>
+							<td> 23 </td>
+							<td> 20 </td>
+							<td> NW </td>
+
+						</tr>
+						<tr>
+							<td> Monday </td>
+							<td> 12 </td>
+							<td> 23 </td>
+							<td> 20 </td>
+							<td> NW </td>
+
+						</tr>
+						<tr>
+							<td> Monday </td>
+							<td> 12 </td>
+							<td> 23 </td>
+							<td> 20 </td>
+							<td> NW </td>
+
+						</tr>
+						<tr>
+							<td> Monday </td>
+							<td> 12 </td>
+							<td> 23 </td>
+							<td> 20 </td>
+							<td> NW </td>
+
+						</tr>
+					</tbody>
+				</table>
 				<div class="img" style="height: 200px;"></div>
 			</div>
 			<div class="main"><a name="map">
 				<div class="img" style="height: 100%; width: 100%;">
 					<span class="tooltip" id="tip">Tooltip</span>
-						<svg width="100%" height="100%" onmousemove="handleMouseMove(event)" xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+						<svg width="100%" height="100%" onmousemove="handleMouseMove(event)" onclick='changeTitle(event)' xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" >
 						<defs>
 							<amcharts:ammap projection="mercator" leftLongitude="80.051163" topLatitude="30.431317" rightLongitude="88.193593" bottomLatitude="26.348125"></amcharts:ammap>
 						</defs>

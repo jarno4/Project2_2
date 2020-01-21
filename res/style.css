@@ -42,6 +42,28 @@ body{
 	background-color: #f1f1f1;
 	padding: 20px;
 	color: black;
+	text-align: center;
+}
+
+.table{
+	border-collapse: collapse;
+	border: 1px solid black;
+	width: 100%;
+	display: none;
+}
+
+.table td, .table th{
+	border: 1px solid #ddd;
+  	padding: 8px;
+
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
 }
 
 .icons {
@@ -50,7 +72,7 @@ body{
 }
 
 .main {
-	flex: 70%;
+	flex: 50%;
 	background-color: #f1f1f1;
 	padding: 20px;
 }
@@ -60,9 +82,10 @@ body{
 }
 
 .footer {
-  padding: 20px;
+  width: 100%;
   text-align: center;
   background: #097d2f;
+  color: white;
 }
 
 .land {
@@ -98,3 +121,4 @@ body{
 .tooltip.active {
    	display: initial;
 }
+

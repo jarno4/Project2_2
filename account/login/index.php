@@ -16,8 +16,8 @@
 </div-->
 
 <div class="login_form">
-	<input class="form_row" name="username" type="text" placeholder="Username" autocomplete="off">
-	<input class="form_row" name="password" type="password" placeholder="Password">
+	<input class="form_row username" type="text" placeholder="Username" autocomplete="off">
+	<input class="form_row password" type="password" placeholder="Password">
 	<input type="submit" value="Log in" class="submit_button">
 	<span class="sign_up_link">or <a href="/account/signup/">Sign up</a></span>
 </div>
@@ -26,7 +26,10 @@
 </div>
 <script>
     $(".submit_button").click(function(e) {
-        $.post("/account/ajax_handler.php", "qw=123", function(data) {
+        $username = $(".username").val();
+        $password = $(".password").val();
+        $data = "u="+$username+"&p="+$password+"&t=signin";
+        $.post("/account/ajax_handler.php", $data, function(data) {
             alert(data);
         });
         e.preventDefault(); //prevent default action

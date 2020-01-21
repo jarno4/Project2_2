@@ -1,5 +1,6 @@
 <?php
 require 'userdb.php';
+require 'user_session.php';
 
 $username = $_POST['u'];
 $password = $_POST['p'];
@@ -14,6 +15,7 @@ if($form == 'signin'){
             //password correct
             //store hash in session
             echo "correct";
+            $_SESSION["hash"] = $hash;
         } else {
             //password incorrect
             echo "incorrect";

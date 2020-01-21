@@ -51,22 +51,50 @@ body{
 
 .main {
 	flex: 70%;
-	background-color: #fff;
+	background-color: #f1f1f1;
 	padding: 20px;
 }
 .img {
 	width: 100%;
 	padding: 20px;
 }
+
 .footer {
   padding: 20px;
   text-align: center;
   background: #097d2f;
 }
+
+.land {
+	fill: #CCCCCC;
+	fill-opacity: 1;
+	stroke:white;
+	stroke-opacity: 1;
+	stroke-width:0.5;
+}
+
+.land:hover {
+	fill: #097d2f;
+	cursor: pointer;
+}
+
 @media (max-width: 700px) {
   .row, .navbar {   
 	flex-direction: column;
   }
 }
 
+.tooltip {
+    display: none;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: fixed;
+    z-index: 1;
+}
 
+.tooltip.active {
+   	display: initial;
+}

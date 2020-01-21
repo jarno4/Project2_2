@@ -1,3 +1,4 @@
+<?php
 //check user integrity
     //compare db user hash with cookie hash
         // if false -> destroy session
@@ -12,3 +13,5 @@ $db_hash; //get the corresponding hash from db
 if($local_hash != $db_hash){
     //session.destroy()
 }
+
+?>

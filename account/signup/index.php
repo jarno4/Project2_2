@@ -7,13 +7,13 @@
 </head>
 <body>
     <div class="header">
-        <h1>Parivartan Nepal</h1>
+        <img src="/res/img/logo.png" >
+        <!--div class="navbar">
+            <a href="#data">Data</a>
+            <a href="#map">Map</a>
+            <a href="#footer">Contact</a>
+        </div-->
     </div>
-    <!--div class="navbar">
-        <a href="#data">Data</a>
-        <a href="#map">Map</a>
-        <a href="#footer">Contact</a>
-    </div-->
 
     <div class="login_form">
         <input class="form_row" name="username" type="text" placeholder="Username" autocomplete="off">
@@ -24,7 +24,7 @@
             <option value="teacher">Teacher / Professor</option>
             <option value="student">Student</option>
         </select>
-        <input type="submit" value="Sign up" class="submit_button">
+        <input type="submit" value="Sign up" class="submit_button" disabled>
     </div>
     <div class="footer"><a name="footer">
         <div class="img" style="height: 200px;"></div>
@@ -41,6 +41,11 @@
             });
             e.preventDefault(); //prevent default action
         });
+
+        $("input[name='password_2']").change(function() {
+            //check both passwords
+        });
+
     </script>
 </body>
 </html>

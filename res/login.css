@@ -3,5 +3,14 @@ body, *:focus {outline:none;}
 .form_row {margin: 5px 0px 15px 0px;padding:10px 5px; height:38px;width:250px;font-size:14px;display: block;border:1px solid black;border-radius:2px;}
 .submit_button {display: inline-block;padding:5px 10px;border:1px solid black;border-radius:1px}
 .sign_up_link {display: inline-block}
-.login_form input {transition: box-shadow 0.5s ease;}
-.login_form input:hover, .login_form input:focus {transition: box-shadow 0.3s ease;box-shadow:black 0px 0px 4px 0px;}
+.login_form input:not(.submit_button) {transition: box-shadow 0.5s ease;}
+.login_form input:hover:not(.submit_button), .login_form input:focus {transition: box-shadow 0.3s ease;box-shadow:black 0px 0px 4px 0px;}
+input[type="submit" i] {
+    color: black;
+    background-color: #ccc;
+    border: 1px solid #636363;
+}input[type="submit" i]:disabled {
+    color: rgb(170, 170, 170);
+    background-color: #ccc;
+    border: 1px solid #b7b7b7;
+}

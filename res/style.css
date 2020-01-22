@@ -9,6 +9,8 @@ body{
 	color:#aaa;
 	background-color:#fff;
 	margin: 0px;
+	position: relative;
+	min-height: 100vh;
 }
 .header{
 	padding: 1px 10px ;
@@ -17,6 +19,7 @@ body{
 	color: #262626;
 }
 .navbar{
+	display: flex;
 	overflow: hidden;
 	width: 100%;
 	background-color: #097d2f;
@@ -36,11 +39,12 @@ body{
 .content {
 	display: flex;
 	flex:50%;
+	flex-wrap: row-wrap;
 	min-height:550px;
 	flex-wrap: wrap;
 }
 .side{
-	flex: inherit;
+	flex:40%;
 	background-color: #f1f1f1;
 	padding: 20px;
 	color: black;
@@ -74,20 +78,35 @@ body{
 }
 
 .map {
-	flex:inherit;
+	flex:60%;
 	background-color: #f1f1f1;
 	padding: 20px;
 }
 .img {
 	width: 100%;
+	height: 200px;
 	padding: 20px;
+}
+
+.prev_img{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ccc;
 }
 
 .footer {
   width: 100%;
-  height: 200px;
-	position:absolute;
-	bottom:0;
+  height: 100px;
+  position: absolute;
+	bottom: 0;
+  background: #097d2f;
+  color: white;
+}
+
+.footer_index{
+	width: 100%;
+  height: 100px;
   background: #097d2f;
   color: white;
 }
@@ -103,6 +122,10 @@ body{
 .land:hover {
 	fill: #097d2f;
 	cursor: pointer;
+}
+
+.land.active {
+	fill: #097d2f;
 }
 
 @media (max-width: 700px) {

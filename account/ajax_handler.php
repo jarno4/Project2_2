@@ -5,13 +5,14 @@ require 'user_session.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['u'];
     $password = $_POST['p'];
-    if(isset($_POST['t'])){
-        $form = $_POST['t']; //signin/signup
-    }
+    $form = $_POST['t']; //signin/signup
+
+    print_r($_POST);
+
     if(strlen($username) == 0){
-        echo "{'status':'error','reason':'username_empty'}";
+        echo "{'status':'error','info':'username_empty'}";
     } elseif(strlen($password) == 0){
-        echo "{'status':'error','reason':'password_empty'}";
+        echo "{'status':'error','info':'password_empty'}";
     } else{
         if(ctype_alnum($username) && ctype_alnum($password)){
             if($form == 'signin'){
@@ -22,18 +23,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $_SESSION["username"] = $username;
                         $_SESSION["hash"] = $hash;
                     } else {
-                        echo "{'status':'error','reason':'password_incorrect'}";
+                        echo "{'status':'error','info':'password_incorrect'}";
                     }
                 } else {
-                    echo "{'status':'error','reason':'account_not_found'}";
+                    echo "{'status':'error','info':'account_not_found'}";
                 }
             }
             elseif($form == 'signup'){
-                create_account($username, $password,$type);
+                $role = $_POST['r'];
+                $account_type = 0;
+                if($role == 'teacher'){
+                    $account_type = 1;
+                }
+                if(!user_exists($username)){
+                    if(create_account($username, $password,$account_type)){
+                        echo "{'status':'ok','info':'account_created'}";
+                    } else {
+                        echo "{'status':'error','info':'error_creating_account'}";
+                    }
+                } else {
+                    echo "{'status':'error','info':'username_already_exists'}";
+                }
             }
-        }
-        else {
-            echo "{'status':'error','reason':'invalid input'}";
+        } else {
+            echo "{'status':'error','info':'invalid input'}";
         }
 
     }

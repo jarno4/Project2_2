@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $hash = hash('sha256', $username.$password);
                     if(get_user_hash($username) == $hash){
                         echo "{'status':'ok'}";
+                        require 'user_session.php';
                         $_SESSION["username"] = $username;
                         $_SESSION["hash"] = $hash;
                     } else {
@@ -54,6 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('HTTP/1.0 403 Forbidden');
     echo '403 FORBIDDEN';
 }
-
+$conn -> close();
 
 ?>

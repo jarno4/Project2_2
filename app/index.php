@@ -1,3 +1,4 @@
+<?php require($_SERVER["DOCUMENT_ROOT"].'/account/user_session.php')?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -92,6 +93,6 @@
 		</div>
 		<div class="footer_index"></div>
 		<script type="text/javascript" src="/js/svg/svg.js" ></script>
-        		<script type="text/javascript" src="/js/data/data.js" ></script>
+        <script type="text/javascript" src="/js/data/data.js" ></script>
 	</body>
 	</html>

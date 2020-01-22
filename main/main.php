@@ -67,7 +67,7 @@
 				<div class="img" style="height: 200px;"></div>
 			</div>
 			<div class="main"><a name="map">
-				<div class="img" style="height: 100%; width: 100%;">
+				<div style="height: 100%; width: 100%;">
 					<span class="tooltip" id="tip">Tooltip</span>
 						<svg width="100%" height="100%" onmousemove="handleMouseMove(event)" onclick='changeTitle(event)' xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" >
 						<defs>
@@ -92,11 +92,8 @@
 						</svg>
 					<!--<iframe src="https://www.google.com/maps/d/embed?mid=1qQZQovnIfg23BsG1HHcwamg5AChzZVPA&hl=nl" width="640" height="480"></iframe> -->
 					</div>
-				<div class="img" style="height: 200px;"></div>
-				<div class="img" style="height: 200px;"></div>
 			</div>
 		</div>
-		<div class="footer"><a name="footer">
-			<div class="img" style="height: 200px;"></div>
+		<div class="footer">
 		</div>
 	</body>

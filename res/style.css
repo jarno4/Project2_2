@@ -105,6 +105,10 @@ body{
 	cursor: pointer;
 }
 
+.land.active {
+	fill: #097d2f;
+}
+
 @media (max-width: 700px) {
   .row, .navbar {   
 	flex-direction: column;

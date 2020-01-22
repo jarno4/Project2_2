@@ -8,16 +8,16 @@
 	<body>
 		<div class="header">
 			<img src="/res/img/logo.png" >
+            <div class="navbar">
+            	<a href="#">Data</a>
+           		<a href="#">Map</a>
+            	<a href="#">Contact</a>
+            </div>
+		</div>
 
-		</div>
-		<div class="navbar">
-			<a href="#data">Data</a>
-			<a href="#map">Map</a>
-			<a href="#footer">Contact</a>
-		</div>
-		<div class="row">
-			<div class="side"><a name="data">
-				<script src="fp_footer2.js"></script>
+		<div class="content">
+			<div class="side">
+				<!--script src="fp_footer2.js"></script-->
 				<h2 id="sideheader"> Please select a province </h2>
 				<table id="datatable" class="table">
 					<thead>
@@ -66,8 +66,7 @@
 				</table>
 				<div class="img" style="height: 200px;"></div>
 			</div>
-			<div class="main"><a name="map">
-				<div style="height: 100%; width: 100%;">
+			<div class="map">
 					<span class="tooltip" id="tip">Tooltip</span>
 						<svg width="100%" height="100%" onmousemove="handleMouseMove(event)" onclick='changeTitle(event)' xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" >
 						<defs>
@@ -92,8 +91,6 @@
 						</svg>
 					<!--<iframe src="https://www.google.com/maps/d/embed?mid=1qQZQovnIfg23BsG1HHcwamg5AChzZVPA&hl=nl" width="640" height="480"></iframe> -->
 					</div>
-			</div>
 		</div>
-		<div class="footer">
-		</div>
+		<div class="footer"></div>
 	</body>

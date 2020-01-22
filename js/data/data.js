@@ -4,10 +4,9 @@ $("path").click( function(){
         $("#sideheader").html('Please select a province');
         $("#datatable").css('display', 'none');
     } else {
+        $("path").removeClass('active');
         $(this).addClass('active');
         $("#sideheader").html('Data of ' + $(this).attr('title'));
         $("#datatable").css('display', 'table');
     }
-
-    if($(this).attr('id') !== $(this).attr('id')) $(this).removeClass('active');
 });

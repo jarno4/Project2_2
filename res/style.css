@@ -1,0 +1,151 @@
+*{
+	box-sizing: border-box;
+}
+html{
+	font-family: Arial, sans-serif;
+	scroll-behavior: smooth;
+}
+body{
+	color:#aaa;
+	background-color:#fff;
+	margin: 0px;
+	position: relative;
+	min-height: 100vh;
+}
+.header{
+	padding: 1px 10px ;
+	text-align: center;
+	background: #ffffff;
+	color: #262626;
+}
+.navbar{
+	display: flex;
+	overflow: hidden;
+	width: 100%;
+	background-color: #097d2f;
+}
+.navbar a {
+	color: white;
+	padding: 14px 20px;
+	float: left;
+	text-decoration: none;
+	text-align: center;
+}
+
+.navbar a:hover {
+	background-color: #08702a;
+	color: white;
+}
+.content {
+	display: flex;
+	flex:50%;
+	flex-wrap: row-wrap;
+	min-height:550px;
+	flex-wrap: wrap;
+}
+.side{
+	flex:40%;
+	background-color: #f1f1f1;
+	padding: 20px;
+	color: black;
+	text-align: center;
+}
+
+.table{
+	border-collapse: collapse;
+	border: 1px solid black;
+	width: 100%;
+	display: none;
+}
+
+.table td, .table th{
+	border: 1px solid #ddd;
+  	padding: 8px;
+
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.icons {
+	width: 75px;
+    height: 75px;
+}
+
+.map {
+	flex:60%;
+	background-color: #f1f1f1;
+	padding: 20px;
+}
+.img {
+	width: 100%;
+	height: 200px;
+	padding: 20px;
+}
+
+.prev_img{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ccc;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+	bottom: 0;
+  background: #097d2f;
+  color: white;
+}
+
+.footer_index{
+	width: 100%;
+  height: 100px;
+  background: #097d2f;
+  color: white;
+}
+
+.land {
+	fill: #CCCCCC;
+	fill-opacity: 1;
+	stroke:white;
+	stroke-opacity: 1;
+	stroke-width:0.5;
+}
+
+.land:hover {
+	fill: #097d2f;
+	cursor: pointer;
+}
+
+.land.active {
+	fill: #097d2f;
+}
+
+@media (max-width: 700px) {
+  .row, .navbar {   
+	flex-direction: column;
+  }
+}
+
+.tooltip {
+    display: none;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: fixed;
+    z-index: 1;
+}
+
+.tooltip.active {
+   	display: initial;
+}
+

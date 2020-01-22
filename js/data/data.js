@@ -1,26 +1,26 @@
-
-    function changeTitle(event) {
-      	var countryId = event.target.id;
-      	var countryName = event.target.getAttribute("title");
-        var idlist = document.getElementsByTagName('path');
-
-        for(var i=0; i<idlist.length; i++){
-          document.getElementById(idlist[i].id).classList.remove('active');
-        }
-
-      	if(countryId){
-          if(document.getElementById(countryId).classList.contains("active") == true){
-            document.getElementById(countryId).classList.remove("active");
-          }
-        	document.getElementById("sideheader").innerHTML = " Data of " + countryName;
-        	document.getElementById("datatable").style.display = "table";
-          document.getElementById(countryId).classList.add("active");
-      	}
-
-      	else{
-        	document.getElementById("sideheader").innerHTML = "Please select a province";
-        	document.getElementById("datatable").style.display = "none";
-      	}
+$("path").click( function(){
+    var active_province = $(this);
+    if($(this).hasClass('active')){
+        $(this).removeClass('active');
+    } else {
+        $(this).addClass('active');
     }
-  
 
+    if(active_province.attr('id') !== $(this).attr('id')) $(this).removeClass('active');
+
+
+
+
+    if(active_province){
+        document.getElementById("sideheader").innerHTML = " Data of " + active_province.attr('title');
+        document.getElementById("datatable").style.display = "table";
+        document.getElementById(active_province).classList.add("active");
+    }
+
+
+    else {
+        document.getElementById("sideheader").innerHTML = "Please select a province";
+        document.getElementById("datatable").style.display = "none";
+    }
+
+});

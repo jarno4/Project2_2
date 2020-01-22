@@ -20,7 +20,10 @@ if($form == 'signin'){
             //password incorrect
             echo "incorrect";
         }
+    } else {
+        echo "account does not exist";
     }
+
 
 }
 

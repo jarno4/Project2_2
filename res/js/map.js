@@ -1,12 +1,12 @@
-$("path").mousemove(function(){
+$("path").mousemove(function(e){
     //alert("d");
     var countryId = $(this).attr('id');
     var countryName = $(this).attr('title');
     var tooltip = $("#tip");
 
     if(countryId){
-        tooltip.css('left', ($(this).offset().left - 20) + "px");
-        tooltip.css('top', ($(this).offset().top - 20) + "px");
+        tooltip.css('left', (e.pageX - 20) + "px");
+        tooltip.css('top', (e.pageY - 20) + "px");
         tooltip.html(countryName);
         tooltip.addClass("active");
       } else {

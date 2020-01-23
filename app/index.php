@@ -3,7 +3,6 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" type="text/css" href="/res/style.css">
-		<script src="/res/jquery-3.4.1.min.js"></script>
 	</head>
 	<body>
 		<div class="header">
@@ -67,7 +66,8 @@
 			</div>
 				<div class="map">
 						<span class="tooltip" id="tip">Tooltip</span>
-						<svg width="100%" height="100%" onmousemove="handleMouseMove(event)"  xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" >
+						<?php echo file_get_contents($_SERVER["DOCUMENT_ROOT"]."/res/svg/illustrator_map.svg"); ?>
+						<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" >
 							<defs>
 								<amcharts:ammap projection="mercator" leftLongitude="80.051163" topLatitude="30.431317" rightLongitude="88.193593" bottomLatitude="26.348125"></amcharts:ammap>
 							</defs>
@@ -92,7 +92,8 @@
 				</div>
 		</div>
 		<div class="footer_index"></div>
-		<script type="text/javascript" src="/js/svg/svg.js" ></script>
-        <script type="text/javascript" src="/js/data/data.js" ></script>
+		<script src="/res/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="/res/js/svg.js" ></script>
+        <script type="text/javascript" src="/res/js/data.js" ></script>
 	</body>
 	</html>

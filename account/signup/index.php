@@ -43,7 +43,7 @@
         });
 
         $("input[name='password_2']").change(function() {
-            //check both passwords
+            $('.login_form::before').css('content','x');
         });
 
     </script>

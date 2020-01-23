@@ -44,7 +44,7 @@ body{
 	flex-wrap: wrap;
 }
 .side{
-	flex:40%;
+	flex:50%;
 	background-color: #f1f1f1;
 	padding: 20px;
 	color: black;
@@ -52,9 +52,9 @@ body{
 }
 
 .table{
+	width:500px;
 	border-collapse: collapse;
 	border: 1px solid black;
-	width: 100%;
 	display: none;
 }
 
@@ -78,7 +78,6 @@ body{
 }
 
 .map {
-	flex:60%;
 	background-color: #f1f1f1;
 	padding: 20px;
 }
@@ -112,7 +111,6 @@ body{
 }
 
 .land {
-	fill: #CCCCCC;
 	fill-opacity: 1;
 	stroke:white;
 	stroke-opacity: 1;

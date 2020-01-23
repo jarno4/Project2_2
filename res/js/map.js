@@ -1,17 +1,14 @@
 $("path").mousemove(function(e){
-    //alert("d");
-    var countryId = $(this).attr('id');
-    var countryName = $(this).attr('title');
-    var tooltip = $("#tip");
-
-    if(countryId){
-        tooltip.css('left', (e.pageX - 60) + "px");
-        tooltip.css('top', (e.pageY - 40) + "px");
-        tooltip.html(countryName);
-        tooltip.addClass("active");
-      } else {
-        return tooltip.removeClass("active");
-      }
+    if($(this).attr('id')){
+        $("#tip").css('left', (e.pageX - 60) + "px");
+        $("#tip").css('top', (e.pageY - 50) + "px");
+        $("#tip").html($(this).attr('title'));
+        $("#tip").addClass("active");
+    } else {
+        $("#tip").removeClass("active");
+    }
+}).mouseleave(function(){
+    $("#tip").removeClass("active");
 });
 
 $("path").click( function(){

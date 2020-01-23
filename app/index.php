@@ -64,7 +64,6 @@
 							<td> 23 </td>
 							<td> 20 </td>
 							<td> NW </td>
-
 						</tr>
 						<tr>
 							<td> Monday </td>
@@ -72,7 +71,6 @@
 							<td> 23 </td>
 							<td> 20 </td>
 							<td> NW </td>
-
 						</tr>
 						<tr>
 							<td> Monday </td>
@@ -80,7 +78,6 @@
 							<td> 23 </td>
 							<td> 20 </td>
 							<td> NW </td>
-
 						</tr>
 						<tr>
 							<td> Monday </td>
@@ -88,7 +85,6 @@
 							<td> 23 </td>
 							<td> 20 </td>
 							<td> NW </td>
-
 						</tr>
 					</tbody>
 				</table>

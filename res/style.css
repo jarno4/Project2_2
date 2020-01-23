@@ -43,7 +43,7 @@ body{
 	flex-wrap: wrap;
 }
 .side{
-	//flex:50%;
+	flex:40%;
 	background-color: #f1f1f1;
 	padding: 20px;
 	color: black;
@@ -54,6 +54,7 @@ body{
 	width:500px;
 	border-collapse: collapse;
 	border: 1px solid black;
+	text-align: center;
 	display: none;
 }
 
@@ -77,6 +78,7 @@ body{
 }
 
 .map {
+	flex:60%;
 	width:400px;
 	background-color: #f1f1f1;
 	padding: 20px;
@@ -118,12 +120,29 @@ body{
 }
 
 .land:hover {
-	fill: #097d2f;
+	fill: #0ca73f;
 	cursor: pointer;
 }
 
 .land.active {
-	fill: #097d2f;
+	fill: #0ca73f;
+}
+
+.land2 {
+	fill-opacity: 1;
+	stroke:white;
+	stroke-opacity: 1;
+	stroke-width:1.5;
+}
+
+.land2:hover {
+	fill: #ff6666;
+	cursor: pointer;
+}
+
+.land2.active {
+	fill: #ff6666;
+	cursor: pointer;
 }
 
 @media (max-width: 700px) {

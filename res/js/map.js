@@ -5,8 +5,8 @@ $("path").mousemove(function(e){
     var tooltip = $("#tip");
 
     if(countryId){
-        tooltip.css('left', (e.pageX - 20) + "px");
-        tooltip.css('top', (e.pageY - 20) + "px");
+        tooltip.css('left', (e.pageX - 60) + "px");
+        tooltip.css('top', (e.pageY - 40) + "px");
         tooltip.html(countryName);
         tooltip.addClass("active");
       } else {

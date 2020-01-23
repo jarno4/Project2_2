@@ -136,12 +136,12 @@ body{
 }
 
 .land2:hover {
-	fill: #ff6666;
+	fill: #999999;
 	cursor: pointer;
 }
 
 .land2.active {
-	fill: #ff6666;
+	fill: #999999;
 	cursor: pointer;
 }
 

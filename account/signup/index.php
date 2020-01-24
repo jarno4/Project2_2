@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="/res/style.css">
-	<link rel="stylesheet" type="text/css" href="/res/login.css">
-	<script src="/res/jquery-3.4.1.min.js"></script>
+	<!--link rel="stylesheet" type="text/css" href="/res/css/style.css"-->
+	<link rel="stylesheet" type="text/css" href="/res/css/login.css">
+	<script src="/res/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
     <div class="header">

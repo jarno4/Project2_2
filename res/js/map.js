@@ -9,9 +9,7 @@ $("path").mousemove(function(e){
     }
 }).mouseleave(function(){
     $("#tip").removeClass("active");
-});
-
-$("path").click( function(){
+}).click( function(){
     if($(this).hasClass('active')) {
         $(this).removeClass('active');
         $("#sideheader").html('Please select a province');

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet" type="text/css" href="/res/style.css">
+		<link rel="stylesheet" type="text/css" href="/res/css/style.css">
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 	</head>
 	<body>
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		<!--<div class="footer_index"></div>-->	
-		<script src="/res/jquery-3.4.1.min.js"></script>
+		<script src="/res/js/jquery-3.4.1.min.js"></script>
 		<script type="text/javascript" src="/res/js/map.js" ></script>
 		<script type="text/javascript" src="/res/js/raingraph.js" ></script>
 	</body>

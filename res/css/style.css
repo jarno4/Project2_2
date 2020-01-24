@@ -187,14 +187,15 @@ body{
 }
 
 .tab button.active{
-    background-color: #08702a
+    background-color: #08702a;
 }
 
 .tabcontent {
     padding: 6px 12px;
     border: 1px solid #ccc;
-    border-top: none;
 }
+
+
 
 
 

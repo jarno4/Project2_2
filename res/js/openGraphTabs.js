@@ -1,12 +1,15 @@
 
 $("button").click(function(){
+	var g = $(this).attr('id');
+
 	    if($(this).hasClass('active')) {
 	        $(this).removeClass('active');
-	        $("canvas"+("id", this.id)).hide();
+	        $("canvas").hide();
 	    } else {
+	    	console.log("#" + g + "g");
 	    	$("button").removeClass('active');
 	        $(this).addClass('active');
-	        $("canvas"+("id", this.id)).show();
+	        $("#" + g + "g").show();
 	    }
 	}
 );

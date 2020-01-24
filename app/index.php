@@ -29,17 +29,9 @@
 							<button class="tabbutton" id = "regenval">Regenval</button>
 							<button class="tabbutton" id = "windsterkte">Windsterkte</button>
 
-								<div class = "tabcontent">
-									<canvas id="temperatuur"></canvas> 
-								</div>
-
-								<div class = "tabcontent">	
-								    <canvas id="regenval"></canvas> 
-								</div>
-
-								<div class = "tabcontent">
-									<canvas id="windsterkte"></canvas>
-								</div>
+							<div class = "tabcontent"><canvas id="temperatuurg"></canvas> </div>
+							<div class = "tabcontent"><canvas id="regenvalg"></canvas> </div>
+							<div class = "tabcontent"><canvas id="windsterkteg"></canvas></div>
 						</div>
 				</div>
 			</div>

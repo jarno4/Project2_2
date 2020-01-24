@@ -1,4 +1,4 @@
-var ctx = document.getElementById('temperatuur').getContext('2d');
+var ctx = document.getElementById('temperatuurg').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
     type: 'line',
@@ -18,8 +18,8 @@ var chart = new Chart(ctx, {
     options: {}
 });
 
-/*
-var ctx = document.getElementById('regenval').getContext('2d');
+
+var ctx = document.getElementById('regenvalg').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
     type: 'line',
@@ -40,7 +40,7 @@ var chart = new Chart(ctx, {
 });
 
 
-var ctx = document.getElementById('windsterkte').getContext('2d');
+var ctx = document.getElementById('windsterkteg').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
     type: 'line',
@@ -60,4 +60,3 @@ var chart = new Chart(ctx, {
     options: {}
 });
 
-*/

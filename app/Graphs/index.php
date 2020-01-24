@@ -18,15 +18,18 @@
 		<div class="content">
 			<div class="side">
 				<h2 id="sideheader"> Please select a province </h2>
-				<script> createRainGraph(); </script>
+				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 			</div>
 
 			<div class="map">
+				<canvas id="myChart"></canvas>
+				<script type="text/javascript">
+				</script>
 			</div>
 
 		</div>
 		<div class="footer_index"></div>
 		<script src="/res/jquery-3.4.1.min.js"></script>
-		<script type="text/javascript" src="/res/js/raingraph.svg"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 	</body>
 	</html>

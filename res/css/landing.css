@@ -1,0 +1,84 @@
+body {
+    background:url("/res/img/landing.jpg") #000 no-repeat fixed top;
+    margin:40px;
+}
+.page {
+    margin:auto;
+    min-width:660px;
+    max-width:1200px;
+//border: 1px solid white;
+    position: relative;
+}
+.logo {
+    background: url(/res/img/logo_t.png) no-repeat;
+    width: 160px;
+    height: 100px;
+    background-size: 150px;
+    display: inherit;
+    position: absolute;
+    top: 0;
+}
+
+ul {
+    list-style-type:none;
+    padding:10px 20px;
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+.navbar {
+    display: inherit;
+    width: calc(100% - 200px);
+    margin: 10px 0px 0px;
+    position: absolute;
+    top: 0;
+    right:0;
+}
+.header {
+    display: inline-block;
+    margin-bottom:100px;
+    height:100px;
+    width: 100%;
+}
+
+.get_started {
+    background: rgb(14, 125, 255);;
+    color: white;
+    width: fit-content;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 60px auto 10px;
+    font-size:15px;
+    font-weight: bold;
+    display: block;
+}
+.content {
+    width:100%;
+    min-height:400px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro {
+    margin:40px 0 0 0;
+    color:white;
+    font-size:30px;
+    font-weight:600;
+    display: inline;
+}
+.subtitle {
+    margin:40px 0 0 0;
+    color:#CCC;
+    font-size:20px;
+    display: inline;
+}

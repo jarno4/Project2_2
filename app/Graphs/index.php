@@ -6,7 +6,8 @@
 	</head>
 	<body>
 		<div class="header">
-			<img src="/res/img/logo.png" >
+			<a href="/app" >
+				<img src="/res/img/logo.png" >
             <div class="navbar">
             	<a href="#">Data</a>
            		<a href="#">Map</a>

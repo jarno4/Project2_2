@@ -2,7 +2,7 @@
 //setup db connection
 $db_server = "localhost";
 $db_username = "root";
-$db_password = "namaste";
+$db_password = "";
 $db_name = "project2_2";
 
 // Create connection

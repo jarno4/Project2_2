@@ -1,19 +1,12 @@
+<?php require($_SERVER["DOCUMENT_ROOT"].'/account/user_session.php')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!--link rel="stylesheet" type="text/css" href="/res/css/style.css"-->
+	<link rel="stylesheet" type="text/css" href="/res/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/res/css/login.css">
-	<script src="/res/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-    <div class="header">
-            <img src="/res/img/logo.png" >
-            <!--div class="navbar">
-                <a href="#data">Data</a>
-                <a href="#map">Map</a>
-                <a href="#footer">Contact</a>
-            </div-->
-        </div>
+    <?php require($_SERVER["DOCUMENT_ROOT"]."/header.php") ?>
 
     <div class="login_form">
         <input class="form_row" name="username" type="text" placeholder="Username" autocomplete="off">
@@ -24,6 +17,7 @@
     <div class="footer"><a name="footer">
         <div class="img" style="height: 200px;"></div>
     </div>
+    <script src="/res/js/jquery-3.4.1.min.js"></script>
     <script>
         $(".submit_button").click(function(e) {
             var username = $('input[name="username"]').val();
@@ -39,5 +33,6 @@
 
 
         </script>
+
     </body>
 </html>

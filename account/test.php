@@ -1,5 +1,5 @@
 <?php
-require("user_session.php");
+session_start();
 $_SESSION['username'] = "test123";
 
 ?>

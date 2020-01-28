@@ -13,12 +13,13 @@ $("path").mousemove(function(e){
     if($(this).hasClass('active')) {
         $(this).removeClass('active');
         $("#sideheader").html('Please select a province');
-        $("#temperatuurg").hide();
         $(".tab").hide();
-        $("canvas").hide();
     } else {
         $("path").removeClass('active');
-        $(this).addClass('active');
+        $("canvas").hide();
+        $("li").children("a").css('background', '#fff');
+        $("li").children("a").css('border-bottom-color', '#ccc');
+        $(this).addClass('active'); 
         $("#sideheader").html('Data of ' + $(this).attr('title'));
         $(".tab").show();
         $("#tab1").children("a").css('background', '#f1f1f1');

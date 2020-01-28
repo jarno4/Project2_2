@@ -1,6 +1,6 @@
 <?php
 require 'userdb.php';
-require 'user_session.php';
+//include 'user_session.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['u'];
@@ -10,24 +10,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //print_r($_POST);
 
     if(strlen($username) == 0){
-        echo "{'status':'error','info':'username_empty'}";
+        echo "{\"status\":\"error\",\"info\":\"username_empty\"}";
     } elseif(strlen($password) == 0){
-        echo "{'status':'error','info':'password_empty'}";
+        echo "{\"status\":\"error\",\"info\":\"password_empty\"}";
     } else{
         if(ctype_alnum($username) && ctype_alnum($password)){
             if($form == 'signin'){
                 if(user_exists($username)){
                     $hash = hash('sha256', $username.$password);
                     if(get_user_hash($username) == $hash){
-                        echo "{'status':'ok'}";
+                        echo "{\"status\":\"ok\"}";
                         require 'user_session.php';
                         $_SESSION["username"] = $username;
                         $_SESSION["hash"] = $hash;
                     } else {
-                        echo "{'status':'error','info':'password_incorrect'}";
+                        echo "{\"status\":\"error\",\"info\":\"password_incorrect\"}";
                     }
                 } else {
-                    echo "{'status':'error','info':'account_not_found'}";
+                    echo "{\"status\":\"error\",\"info\":\"account_not_found\"}";
                 }
             }
             elseif($form == 'signup'){
@@ -38,16 +38,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
                 if(!user_exists($username)){
                     if(create_account($username, $password,$account_type)){
-                        echo "{'status':'ok','info':'account_created'}";
+                        echo "{\"status\":\"ok\",\"info\":\"account_created\"}";
                     } else {
-                        echo "{'status':'error','info':'error_creating_account'}";
+                        echo "{\"status\":\"error\",\"info\":\"error_creating_account\"}";
                     }
                 } else {
-                    echo "{'status':'error','info':'username_already_exists'}";
+                    echo "{\"status\":\"error\",\"info\":\"username_already_exists\"}";
                 }
             }
         } else {
-            echo "{'status':'error','info':'invalid input'}";
+            echo "{\"status':\"error\",\"info\":\"invalid input\"}";
         }
 
     }

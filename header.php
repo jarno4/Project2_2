@@ -7,7 +7,7 @@
         <a href="/about">About Us</a>
         <?php
             if(!empty($_SESSION['username'])){
-                echo "<a href='/account/profile' style='position:absolute;right:0'>Welcome,".$_SESSION['username'].'</a>';
+                echo "<a href='/account/profile' style='position:absolute;right:10px'>Welcome,".$_SESSION['username'].'</a>';
             }
         ?>
       </div>

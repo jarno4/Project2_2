@@ -14,10 +14,12 @@ $("path").mousemove(function(e){
         $(this).removeClass('active');
         $("#sideheader").html('Please select a province');
         $("#datatable").css('display', 'none');
+        $("button").hide();
     } else {
         $("path").removeClass('active');
         $(this).addClass('active');
         $("#sideheader").html('Data of ' + $(this).attr('title'));
         $("#datatable").css('display', 'table');
+        $("button").show();
     }
 });

@@ -3,12 +3,12 @@ $(document).ready(function(){
 });
 
 
-$("button").click(function(){
+$("#tabs li a").click(function(){
 	var g = $(this).attr('id');
 
 	    if($(this).hasClass('active')) {
 	        $(this).removeClass('active');
-	        $("tabcontent").hide();
+	        $("canvascontainer").hide();
 	        $("#" + g + "g").hide();
 	    } else {
 	    	$("button").removeClass('active');

@@ -18,7 +18,7 @@
 		<div class="content">
 			<div class="side">
 				<h2 id="sideheader"> Please select a province </h2>
-				<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
 			</div>
 
 			<div class="map">

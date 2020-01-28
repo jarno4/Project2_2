@@ -17,24 +17,43 @@
 		</div>
 
 		<div class="content">
-			<div class="side">
+			<div class="map">
 				<span class="tooltip" id="tip">Tooltip</span>
 
 				<?php echo file_get_contents($_SERVER["DOCUMENT_ROOT"]."/res/svg/illustrator_map.svg"); ?>
 			</div>
-				<div class="map">
+				<div class="graph">
 					<h2 id="sideheader"> Please select a province </h2>
-						<div class='tab'>
-							<button class="tabbutton" id = "temperatuur">Temperatuur</button>
-							<button class="tabbutton" id = "regenval">Regenval</button>
-							<button class="tabbutton" id = "windsterkte">Windsterkte</button>
+						<ul id="tabs">
+					      	<li><a href="#temperatuur">Temperatuur</a></li>
+					      	<li><a href="#regenval">Regenval</a></li>
+					      	<li><a href="#windsterkte">Windsterkte</a></li>
+
+						</ul>
+					        <div class="canvascontainer" id="temperatuur">
+					        	<canvas id="temperatuurg"></canvas>
+					        </div>
+					        <div class="canvascontainer" id="regenval">
+					        	<canvas id="regenvalg"></canvas>
+					        </div>
+					        <div class="canvascontainer" id="windsterkte">
+					        	<canvas id="windsterkteg"></canvas>
+					        </div>
+
+         				</div>
+
+
+						<!--<div class='tab'>
+							<button id = "temperatuur">Temperatuur</button>
+							<button id = "regenval">Regenval</button>
+							<button id = "windsterkte">Windsterkte</button>
 							
 							<canvas id="temperatuurg"></canvas>
 							<canvas id="regenvalg"></canvas>
 							<canvas id="windsterkteg"></canvas>
 
 						</div>
-				</div>
+				</div>-->
 			</div>
 		<!--<div class="footer_index"></div>-->	
 		<script src="/res/js/jquery-3.4.1.min.js"></script>

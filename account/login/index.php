@@ -14,9 +14,6 @@
         <input type="submit" value="Log in" class="submit_button">
         <span class="sign_up_link">or <a href="/account/signup/">Sign up</a></span>
     </div>
-    <div class="footer"><a name="footer">
-        <div class="img" style="height: 200px;"></div>
-    </div>
     <script src="/res/js/jquery-3.4.1.min.js"></script>
     <script>
         $(".submit_button").click(function(e) {

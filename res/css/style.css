@@ -39,12 +39,13 @@ body{
 .navbar a {
 	color: white;
 	padding: 16px 20px;
+	margin-right: 5px;
 	float: left;
 	text-decoration: none;
 	text-align: center;
 	font-size: 16px;
 	border-radius: 7px;
-	border: 1px solid #96ba1c;
+	border: 2px solid #96ba1c;
 }
 
 .navbar a:hover {

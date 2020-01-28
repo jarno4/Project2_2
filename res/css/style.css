@@ -74,6 +74,10 @@ body{
 	padding: 20px;
 }
 
+#sideheader{
+	color:  #047f31;
+}
+
 
 .prev_img{
 	width: 80%;
@@ -178,13 +182,50 @@ body{
 	color: #08702a;
 }
 
-.container {
-    clear:both;           
-    width:100%; 
-    border-left: solid 1px #CCC;
-    border-right: solid 1px #CCC;
-  	border-bottom: solid 1px #CCC;
-    text-align:left;
-  	padding-top: 20px;
-
+.graph button{
+	position: absolute;
+	right: 40px;
+	top: 570px;
+	color: white;
+	background-color: #96BA1C;
+	font-weight: bold; 
+	display:block;
+	padding-top: 9px;
+    padding-left: 9px;
+   	padding-right: 9px;
+    padding-bottom: 9px; 
+    border-radius: 9px;
+    border: 1px solid #b3b3b3; 
 }
+
+.weatherdata {
+	position: absolute;
+	bottom: 110px;
+	right: 20px;
+	padding:40px;
+	border: 1px solid #f1f1f1;
+	border-top-color: #ccc;
+	border-bottom-color: black;
+	width: 440px;
+	height: 248px;
+}
+
+#weatherlocation{
+	color:  #047f31;
+}
+
+#weathertemperature h1{
+	color: black;
+	font-size: 60px;
+	line-height: 0px;
+	float: left;
+}
+
+#weatherpicture img{
+	float: left;
+	width: 100px;
+}
+
+#weatherrain{}
+
+#weatherwind{}

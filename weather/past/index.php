@@ -23,6 +23,8 @@
 					        <canvas id="temperatuurg"></canvas>
 					        <canvas id="regenvalg"></canvas>
 					        <canvas id="windsterkteg"></canvas>
+
+					        <button id="xmlbutton"> Download XML </button>
          		</div>
 			</div>
         <script src="/res/js/jquery-3.4.1.min.js"></script>

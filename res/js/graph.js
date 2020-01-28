@@ -1,8 +1,3 @@
-$(document).ready(function(){
-  $("canvas").hide();
-});
-
-
 $("button").click(function(){
 	var g = $(this).attr('id');
 
@@ -17,6 +12,26 @@ $("button").click(function(){
 	    }
 	}
 );
+
+
+
+$(".tab").click(function(){
+	var t = $(this).attr('id');
+	$("canvas").hide();
+		switch (t){
+			case "tab1":
+				$("#temperatuurg").show();
+			    break;
+			case "tab2":
+			    $("#regenvalg").show()
+			    break;
+			case "tab3":
+			    $("#windsterkteg").show()
+			    break;
+		}
+	}
+);
+
 
 var ctx = document.getElementById('temperatuurg').getContext('2d');
 var chart = new Chart(ctx, {
@@ -79,4 +94,9 @@ var chart = new Chart(ctx, {
 	// Configuration options go here
 	options: {}
 });
+
+
+$("canvas").hide();
+
+
 

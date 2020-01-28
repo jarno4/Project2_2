@@ -16,21 +16,13 @@
 				<div class="graph">
 					<h2 id="sideheader"> Please select a province </h2>
 						<ul id="tabs">
-					      	<li><a href="#temperatuur">Temperatuur</a></li>
-					      	<li><a href="#regenval">Regenval</a></li>
-					      	<li><a href="#windsterkte">Windsterkte</a></li>
-
+					      	<li class="tab" id="tab1"><a href="#temperatuur">Temperatuur</a></li>
+					      	<li class="tab" id="tab2"><a href="#regenval">Regenval</a></li>
+					      	<li class="tab" id="tab3"><a href="#windsterkte">Windsterkte</a></li>
 						</ul>
-					        <div class="canvascontainer" id="temperatuur">
-					        	<canvas id="temperatuurg"></canvas>
-					        </div>
-					        <div class="canvascontainer" id="regenval">
-					        	<canvas id="regenvalg"></canvas>
-					        </div>
-					        <div class="canvascontainer" id="windsterkte">
-					        	<canvas id="windsterkteg"></canvas>
-					        </div>
-
+					        <canvas id="temperatuurg"></canvas>
+					        <canvas id="regenvalg"></canvas>
+					        <canvas id="windsterkteg"></canvas>
          				</div>
 
 

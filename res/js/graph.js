@@ -18,15 +18,23 @@ $("button").click(function(){
 $(".tab").click(function(){
 	var t = $(this).attr('id');
 	$("canvas").hide();
+	$("li").children("a").css('background', '#fff');
+	$("li").children("a").css('border-bottom-color', '#CCC');
 		switch (t){
 			case "tab1":
 				$("#temperatuurg").show();
+				$(this).children("a").css('background', '#f1f1f1');
+				$(this).children("a").css('border-bottom-color', '#f1f1f1');
 			    break;
 			case "tab2":
-			    $("#regenvalg").show()
+			    $("#regenvalg").show();
+			    $(this).children("a").css('background', '#f1f1f1');
+			    $(this).children("a").css('border-bottom-color', '#f1f1f1');
 			    break;
 			case "tab3":
-			    $("#windsterkteg").show()
+			    $("#windsterkteg").show();
+			    $(this).children("a").css('background', '#f1f1f1');
+			    $(this).children("a").css('border-bottom-color', '#f1f1f1');
 			    break;
 		}
 	}

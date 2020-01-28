@@ -23,20 +23,7 @@
 					        <canvas id="temperatuurg"></canvas>
 					        <canvas id="regenvalg"></canvas>
 					        <canvas id="windsterkteg"></canvas>
-         				</div>
-
-
-						<!--<div class='tab'>
-							<button id = "temperatuur">Temperatuur</button>
-							<button id = "regenval">Regenval</button>
-							<button id = "windsterkte">Windsterkte</button>
-							
-							<canvas id="temperatuurg"></canvas>
-							<canvas id="regenvalg"></canvas>
-							<canvas id="windsterkteg"></canvas>
-
-						</div>
-				</div>-->
+         		</div>
 			</div>
         <script src="/res/js/jquery-3.4.1.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>

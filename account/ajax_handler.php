@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['p'];
     $form = $_POST['t']; //signin/signup
 
-    print_r($_POST);
+    //print_r($_POST);
 
     if(strlen($username) == 0){
         echo "{'status':'error','info':'username_empty'}";

@@ -9,6 +9,7 @@
     <?php require($_SERVER["DOCUMENT_ROOT"]."/header.php") ?>
 
     <div class="login_form">
+        <span class="go_back">Go Back</span>
         <input class="form_row" name="username" type="text" placeholder="Username" autocomplete="off">
         <input class="form_row" name="password" type="password" placeholder="Password">
         <input type="submit" value="Log in" class="submit_button">

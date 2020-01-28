@@ -1,5 +1,5 @@
 body, *:focus {outline:none;}
-.login_form {width: fit-content;margin:auto;padding:30px 75px;border: 1px solid red}
+.login_form {width: fit-content;margin:auto;padding:30px 75px;/*border: 1px solid red*/}
 .form_row {margin: 5px 0px 15px 0px;padding:10px 5px; height:38px;width:250px;font-size:14px;display: block;border:1px solid black;border-radius:2px;}
 .submit_button {display: inline-block;padding:5px 10px;border:1px solid black;border-radius:1px}
 .sign_up_link {display: inline-block}
@@ -15,7 +15,7 @@ input[type="submit" i] {
     border: 1px solid #b7b7b7;
 }
 .login_form::before{
-    content: "";
+    //content: "";
     width: 20px;
     height: 20px;
     background: #333;

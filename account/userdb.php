@@ -18,7 +18,7 @@ function get_user_hash($username){
     global $conn;
     $query_string = "SELECT user_hash, request FROM users WHERE username='$username'";
     $query = $conn -> query($query_string);
-    $result = mysqli_fetch_row($query)[0];
+    $result = mysqli_fetch_row($query);
     return $result;
 }
 

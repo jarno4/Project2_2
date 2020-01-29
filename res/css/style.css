@@ -202,19 +202,20 @@ body{
    	padding-right: 9px;
     padding-bottom: 9px; 
     border-radius: 9px;
-    border: 1px solid #b3b3b3; 
+    border: 1px solid #b3b3b3;
+    cursor: pointer;
 }
 
 .weatherdata {
 	position: absolute;
-	bottom: 110px;
+	bottom: 180px;
 	right: 20px;
 	padding:40px;
 	border: 1px solid #f1f1f1;
 	border-top-color: #ccc;
-	border-bottom-color: black;
+	border-bottom-color: #ccc;
 	width: 440px;
-	height: 248px;
+	/*height: 248px;*/
 }
 
 #weatherlocation{
@@ -226,6 +227,7 @@ body{
 	font-size: 60px;
 	line-height: 0px;
 	float: left;
+	padding-right: 20px;
 }
 
 #weatherpicture img{
@@ -233,6 +235,14 @@ body{
 	width: 100px;
 }
 
-#weatherrain{}
+.weatherinfo{
+	width: 150px;
+	float: left;
+	text-align: left;
+	padding-bottom: 2px;
+}
 
-#weatherwind{}
+.weatherinfo h3{
+	padding: 3px;
+    margin: 0px;
+}

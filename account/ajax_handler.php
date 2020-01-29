@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     //print_r($_POST);
     if(get_user_hash($username)[1] == 1){
-        echo "{\"status\":\"error\",\"info\":\"Account is pending approval.\"}";
+        echo "{\"status\":\"error\",\"info\":\"Account is already pending approval.\"}";
     }else {
         if(strlen($username) == 0){
             echo "{\"status\":\"error\",\"info\":\"Username is empty.\"}";

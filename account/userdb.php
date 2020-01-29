@@ -1,11 +1,11 @@
 <?php
 //setup db connection
-$db_server = "localhost";
+$db_server = "127.0.0.1";
 $db_username = "root";
-$db_password = "";
+$db_password = "namaste";
 $db_name = "project2_2";
 
-// Create connection
+// Create connectionS
 $conn = new mysqli($db_server, $db_username, $db_password, $db_name);
 
 // Check connection
@@ -26,7 +26,11 @@ function create_account($username, $password, $type){
     global $conn;
     $password_sha256 = hash('sha256', $password);
     $user_hash_sha256 = hash('sha256', $username.$password);
-    $query_string = "INSERT INTO users (`username`,`password`,`user_hash`,`type`) VALUES('$username', '$password_sha256', '$user_hash_sha256', '$type')";
+    $request = 0;
+    if($type==1){
+        $request = 1;
+    }
+    $query_string = "INSERT INTO users (`username`,`password`,`user_hash`,`type`,`request`) VALUES('$username', '$password_sha256', '$user_hash_sha256', '$type', '$request')";
     $result = $conn -> query($query_string);
     return $result;
 }

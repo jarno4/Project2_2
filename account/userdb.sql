@@ -6,4 +6,5 @@ CREATE TABLE `project2_2`.`users` (
   `password` CHAR(64) NOT NULL,
   `user_hash` CHAR(64) NOT NULL,
   `type` TINYINT NOT NULL DEFAULT 0,
+  `request` BOOLEAN NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`));

@@ -8,18 +8,21 @@ $db_name = "project2_2";
 // Create connectionS
 $conn = new mysqli($db_server, $db_username, $db_password, $db_name);
 
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . $conn->connect_error);
-    //redirect to error page
+if(!$conn){
+    $conn=null;
 }
 
 function get_user($username){
     global $conn;
     $query_string = "SELECT user_hash, request, type FROM users WHERE username='$username'";
-    $query = $conn -> query($query_string);
-    $result = mysqli_fetch_row($query);
-    return $result;
+    $query = $conn -> query($query_string) or $query=false;
+    if($query){
+        $result = mysqli_fetch_row($query);
+        if($result){
+            return $result;
+        }
+    }
+    return false;
 }
 
 function create_account($username, $password, $type){
@@ -44,7 +47,7 @@ function user_exists($username){
 }
 
 //create_account("user1","pass1",0);
-//print_r(get_user_hash('user1'));
+//print_r(get_user('test123'));
 //echo user_exists('user1');
 
 ?>

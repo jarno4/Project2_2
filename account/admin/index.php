@@ -19,21 +19,23 @@
     <h2> teachers request</h2>
 </div>
 <ul id="myul">
-    <li> Pekela <button onclick="accept()">accept</button><button onclick="discard()">Discard</button></li>
+    <li> <span>Pekela</span> <button class="accept">accept</button><button class="decline">Discard</button></li>
 </ul>
+<script src="/res/js/jquery-3.4.1.min.js"></script>
+<script>
+    $(".accept").click(function(e) {
+        var naam = $(this).parent().find("span").html();
+        console.log( naam);
 
+    });
+    $(".decline").click(function(e) {
+        var naam = $(this).parent().find("span").html();
+        console.log( naam);
 
+    });
+</script>
 
 
 </body>
-<script>
-    function accept(){
-        console.log("blablala")
-        //entry uit request halen en in normale lijst zetten
-    }
-    function discard(){
-        console.log("hahahahah")
 
-    }
-</script>
 </html>

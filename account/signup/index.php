@@ -1,4 +1,4 @@
-<?php require($_SERVER["DOCUMENT_ROOT"].'/account/user_session.php')?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

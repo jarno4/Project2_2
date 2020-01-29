@@ -44,7 +44,7 @@ function user_exists($username){
 }
 
 //create_account("user1","pass1",0);
-print_r(get_user_hash('user1'));
+//print_r(get_user_hash('user1'));
 //echo user_exists('user1');
 
 ?>

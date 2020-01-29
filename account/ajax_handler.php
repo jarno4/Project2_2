@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } else {
                 echo "{\"status':\"error\",\"info\":\"Invalid input\"}";
             }
-
+        }
     }
 } else {
     header('HTTP/1.0 403 Forbidden');

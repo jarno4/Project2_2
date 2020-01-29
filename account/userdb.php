@@ -14,9 +14,9 @@ if (!$conn) {
     //redirect to error page
 }
 
-function get_user_hash($username){
+function get_user($username){
     global $conn;
-    $query_string = "SELECT user_hash, request FROM users WHERE username='$username'";
+    $query_string = "SELECT user_hash, request, type FROM users WHERE username='$username'";
     $query = $conn -> query($query_string);
     $result = mysqli_fetch_row($query);
     return $result;

@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $form = $_POST['t']; //signin/signup
 
     //print_r($_POST);
-    if(get_user_hash($username)[1] == 1){
+    if(get_user($username)[1] == 1){
         echo "{\"status\":\"error\",\"info\":\"Account is already pending approval.\"}";
     }else {
         if(strlen($username) == 0){
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if($form == 'signin'){
                     if(user_exists($username)){
                         $hash = hash('sha256', $username.$password);
-                        if(get_user_hash($username)[0] == $hash){
+                        if(get_user($username)[0] == $hash){
                             echo "{\"status\":\"ok\"}";
                             session_start();
                             $_SESSION["username"] = $username;

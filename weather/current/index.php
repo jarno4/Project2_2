@@ -16,7 +16,7 @@
 				<div class="graph">
 					<h1 id="weatherlocation"> Karnali </h1>
 						<div class="weatherdata">
-							<div id="weatherpicture"> <img src="/res/img/zon.png" ></div>
+							<div id="weatherpicture"> <img src="/res/img/Zon.png" ></div>
 							<div id="weathertemperature"> <h1> 9° <br></h1> </div>
 							<div id="weatherrain"> <h3> Regenval = 20% </h3> </div>
 							<div id="weatherwind"> <h3> windkracht = 5 </h3> </div>

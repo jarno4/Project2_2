@@ -16,9 +16,9 @@ if (!$conn) {
 
 function get_user_hash($username){
     global $conn;
-    $query_string = "SELECT user_hash FROM users WHERE username='$username'";
+    $query_string = "SELECT user_hash, request FROM users WHERE username='$username'";
     $query = $conn -> query($query_string);
-    $result = mysqli_fetch_row($query)[0];
+    $result = mysqli_fetch_row($query);
     return $result;
 }
 
@@ -44,7 +44,7 @@ function user_exists($username){
 }
 
 //create_account("user1","pass1",0);
-//echo get_user_hash('x');
+//print_r(get_user_hash('user1'));
 //echo user_exists('user1');
 
 ?>

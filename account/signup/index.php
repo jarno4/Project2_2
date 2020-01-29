@@ -30,8 +30,14 @@
             var password2 = $('input[name="password_2"]').val();
             var role = $('select[name="role"]').val();
             var data = "u="+username+"&p="+password+"&r="+role+"&t=signup";
-            $.post("/account/ajax_handler.php", data, function(data) {
-                alert(data);
+            $.post("/account/ajax_handler.php", data, function(response) {
+                var obj = JSON.parse(response);
+                if(obj.status == "error"){
+                    $('.error').css("display","block").html(obj.info)
+                } else {
+                    $('.error').css("display","none");
+                    window.location.href="/weather/current";
+                }
             });
             e.preventDefault(); //prevent default action
         });

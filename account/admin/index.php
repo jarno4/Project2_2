@@ -19,7 +19,7 @@
     <h2> teachers request</h2>
 </div>
 <ul id="myul">
-    <li> <span>Pekela</span> <button class="accept">accept</button><button class="decline">Discard</button></li>
+    <li> <span style="display: none">id</span>Pekela <button class="accept">accept</button><button class="decline">Discard</button></li>
 </ul>
 <script src="/res/js/jquery-3.4.1.min.js"></script>
 <script>

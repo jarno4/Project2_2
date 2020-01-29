@@ -16,7 +16,7 @@ if (!$conn) {
 
 function get_user_hash($username){
     global $conn;
-    $query_string = "SELECT user_hash FROM users WHERE username='$username'";
+    $query_string = "SELECT user_hash FROM users WHERE username='$username' AND request=0";
     $query = $conn -> query($query_string);
     $result = mysqli_fetch_row($query)[0];
     return $result;

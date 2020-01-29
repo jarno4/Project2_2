@@ -13,6 +13,7 @@ $("path").mousemove(function(e){
     if($(this).hasClass('active')) {
         $(this).removeClass('active');
         $("#sideheader").html('Please select a province');
+        $("canvas").hide();
         $(".tab").hide();
     } else {
         $("path").removeClass('active');

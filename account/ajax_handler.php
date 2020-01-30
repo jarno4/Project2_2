@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $form = $_POST['t']; //signin/signup
 
     //print_r($_POST);
-    if(get_user($username)[1] == 1){
+    if(get_user($username) && get_user($username)[1] == 1){
         echo "{\"status\":\"error\",\"info\":\"Account is already pending approval.\"}";
     }else {
         if(strlen($username) == 0){

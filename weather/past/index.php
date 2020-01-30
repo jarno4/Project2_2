@@ -10,7 +10,6 @@
 		<div class="content">
 			<div class="map">
 				<span class="tooltip" id="tip">Tooltip</span>
-
 				<?php echo file_get_contents($_SERVER["DOCUMENT_ROOT"]."/res/svg/illustrator_map.svg"); ?>
 			</div>
 				<div class="graph">

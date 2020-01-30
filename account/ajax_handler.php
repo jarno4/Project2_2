@@ -1,7 +1,7 @@
 <?php
 require 'userdb.php';
 //include 'user_session.php';
-//error_reporting(E_ALL);
+error_reporting(E_ALL);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $conn) {
     $username = $_POST['u'];

@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 //setup db connection
 $db_server = "127.0.0.1";
 $db_username = "root";

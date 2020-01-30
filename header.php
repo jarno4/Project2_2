@@ -2,8 +2,8 @@
 <div class="header">
     <div class="logo_nav"></div>
     <div class="navbar">
-        <a href="/weather/current">Overview</a>
-        <a href="/weather/past">Data</a>
+        <a href="/weather/current">Current weather</a>
+        <a href="/weather/past">Past weather</a>
         <a href="/about">About Us</a>
         <?php
             if(!empty($_SESSION['username'])){

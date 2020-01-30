@@ -15,8 +15,10 @@ $("path").mousemove(function(e){
         $("#sideheader").html('Please select a province');
         $("canvas").hide();
         $(".tab").hide();
+        $("#tabs").css('border-bottom', 'solid 1px #CCC');
     } else {
         $("path").removeClass('active');
+        $("#tabs").css('border-bottom', 'solid 0px #CCC');
         $("canvas").hide();
         $("li").children("a").css('background', '#fff');
         $("li").children("a").css('border-bottom-color', '#ccc');

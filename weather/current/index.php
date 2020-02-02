@@ -16,9 +16,9 @@
 				<div class="graph">
 					<h2 id="sideheader"> Please select a province </h2>
 						<div class="weatherdata">
-							<div id="weatherpicture"> <img src="/res/img/Zon.png" ></div>
-							<div id="weathertemperature"> <h1> 9° <br></h1> </div>
-							<div class="weatherinfo"> <h3> Regenval = 20% </h3><h3> Windkracht = 5 </h3> </div>
+							<img id="weatherpicture" src="/res/img/Zon.png" >
+                            <h1 id="weathertemperature"> 9°</h1>
+							<div class="weatherinfo"> <h3> Rainfall: 20% </h3><h3> wind strength: 5 </h3> </div>
 						</div>
 
          		</div>

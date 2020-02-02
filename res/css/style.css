@@ -208,22 +208,14 @@ body{
 }
 
 .weatherdata {
-	position: absolute;
-	bottom: 180px;
-	right: 20px;
-	padding:40px;
-	border: 1px solid #f1f1f1;
-	border-top-color: #ccc;
-	border-bottom-color: #ccc;
-	width: 440px;
-	/*height: 248px;*/
+
 }
 
 #weatherlocation{
 	color:  #047f31;
 }
 
-#weathertemperature h1{
+#weathertemperature{
 	color: black;
 	font-size: 60px;
 	line-height: 0px;
@@ -231,16 +223,14 @@ body{
 	padding-right: 20px;
 }
 
-#weatherpicture img{
+#weatherpicture{
 	float: left;
 	width: 100px;
 }
 
 .weatherinfo{
-	width: 150px;
 	float: left;
 	text-align: left;
-	padding-bottom: 2px;
 }
 
 .weatherinfo h3{
@@ -289,3 +279,28 @@ body{
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.profile_table {
+	width:fit-content;
+	height:fit-content;
+	margin:auto;
+	border-collapse: collapse;
+}
+
+.table_row {
+	display:table-row;
+
+}
+
+.table_row > div:first-child {
+	padding:30px 100px 10px 40px;
+	font-weight: bold;
+}
+
+
+.table_row > div {
+	display:table-cell;
+	padding:30px 40px 10px 40px;
+	text-align: left;
+	border-bottom:1px solid #ddd;
+}

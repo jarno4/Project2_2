@@ -9,6 +9,6 @@
 
 	$get = file_get_contents("/home/localadmin/sambashare/" . $f);
 	$arr = simplexml_load_string($get);
-	print_r($arr[1]['TIME']);
+	print_r($arr[0]);
 
 ?>

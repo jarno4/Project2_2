@@ -42,7 +42,11 @@
 
     $get = file_get_contents(get_current()[0]);
 
-    echo $get[1];
+    //echo $get;
+
+	$xml = simplexml_load_file($get);
+	echo '<pre>';
+	print_r($xml);
 
 /*
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);

@@ -10,7 +10,7 @@
 	$dir = "/home/localadmin/sambashare/" . $station;
 
 
-	$xml = simplexml_load_file($dir);
+	$xml = simplexml_load_string($dir);
 	print_r($xml);
 
 /*

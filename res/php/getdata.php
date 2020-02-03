@@ -1,12 +1,15 @@
 <?php
+    print("<pre>");
 	$base_dir = "/home/localadmin/sambashare/";
 	$stations = scandir($base_dir, SCANDIR_SORT_DESCENDING);
-
+    $measurements = array();
     //$latest_station_files = array();
     print_r($stations);
 	foreach($stations as $station){
-        if(is_dir($base_dir.$station)){
-            print_r($base_dir.$station);
+	    $station_path = $base_dir.$station;
+        if(is_dir($station_path)){
+            print_r();
+            $measurements[] = scandir($station_path, SCANDIR_SORT_DESCENDING);
         }
 	    //print_r($station);
 	    //$station_files = scandir("/home/localadmin/sambashare/".$station, SCANDIR_SORT_DESCENDING);
@@ -44,6 +47,6 @@
 	echo $arr->MEASUREMENT[0]->PRCP;
 */
 
-
+print("</pre>");
 
 ?>

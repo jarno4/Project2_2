@@ -12,6 +12,11 @@
 	$arr = simplexml_load_string($get);
 	print_r($arr);
 	echo $arr->MEASUREMENT[0]->DATE;
+	echo $arr->MEASUREMENT[0]->TIME;
+	echo $arr->MEASUREMENT[0]->TEMP;
+	echo $arr->MEASUREMENT[0]->WDSP;
+	echo $arr->MEASUREMENT[0]->PRCP;
+
 
 
 

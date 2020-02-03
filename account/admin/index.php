@@ -6,7 +6,13 @@
  * Time: 11:09
  */
 ?>
-<?php session_start(); ?>
+<?php session_start();
+if(get_user($_SESSION['username'][1])!==2){
+        header('HTTP/1.0 403 Forbidden');
+        echo '403 FORBIDDEN';
+        exit();
+     }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,11 +27,7 @@
 </div>
 
 <?php
-     if(get_user($_SESSION['username'][1])!==2){
-        header('HTTP/1.0 403 Forbidden');
-        echo '403 FORBIDDEN';
-        exit();
-     }
+
      $star = mysqli_fetch_all(pending_approval());
      $num = mysqli_num_rows(pending_approval());
      if($num!==0){

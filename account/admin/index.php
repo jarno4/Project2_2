@@ -26,7 +26,7 @@
 
 
      for($i =0 ;$i<$num;$i++){
-        echo "<li> <span>".$star[$i]['0']."</span> <button class=\"accept\">accept</button><button class=\"decline\">Discard</button></li>";
+        echo "<li> <span>".$star[$i]['0']."</span> <input type=\"button\" value=\"accept\" class=\"accept_decline\"><input type=\"button\" value=\"discard\" class=\"accept_decline\"></li>";
 
     }
 
@@ -35,8 +35,9 @@
 </ul>
 <script src="/res/js/jquery-3.4.1.min.js"></script>
 <script>
-    $(".accept").click(function(e) {
-        let naam = $(this).parent().find("span").html();
+    $(".accept_decline").click(function(e) {
+        alert($(this).val());
+        /*let naam = $(this).parent().find("span").html();
         console.log( naam);
         jQuery.ajax({
             type: "POST",
@@ -77,7 +78,7 @@
                 }
             }
         });
-
+*/
     });
 </script>
 

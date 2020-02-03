@@ -1,7 +1,7 @@
 <?php
 require 'userdb.php';
 //include 'user_session.php';
-error_reporting(E_ALL);
+error_reporting(0);
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $conn) {
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $conn) {
                     break;
 
                 case 'signup':
-                    $account_type = ($_POST['r'] == 'teacher' ? 1 : 0);
+                    $account_type = $_POST['r'] == 'teacher' ? 1 : 0;
                     if(get_user($username)) $msg = "{\"status\":\"error\",\"info\":\"Username already in use\"}";
                     else {
                         if (account_type == 1) $msg = create_account($username, $password,$account_type) ? "{\"status\":\"ok\",\"info\":\"Account created. Pending Approval\"}" : "{\"status\":\"error\",\"info\":\"error_creating_account\"}";

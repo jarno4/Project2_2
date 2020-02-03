@@ -35,7 +35,7 @@
                 if(obj.status == "error"){
                     $('.error').css("display","block").html(obj.info);
                 } else {
-                    $('.error').html(obj.info);
+                    $('.error').css("display","block").html(obj.info);
                     //window.location.href="/weather/current";
                 }
             });

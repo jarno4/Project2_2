@@ -1,7 +1,7 @@
 <?php
 	$stations = scandir("/home/localadmin/sambashare", SCANDIR_SORT_DESCENDING);
     $latest_station_files = array();
-	for($stations as $station){
+	foreach($stations as $station){
 	    $station_files = scandir("/home/localadmin/sambashare/".$station, SCANDIR_SORT_DESCENDING);
 	    $latest_station_files[] = "/home/localadmin/sambashare/".$station."/".station_files[0];
 	}

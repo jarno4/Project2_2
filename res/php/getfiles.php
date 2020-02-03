@@ -12,7 +12,9 @@
 	print_r($arr[0][1]);
 
 	foreach ($arr as $key => $value) {
-		echo $key;
+		if($key == "['DATA']"){
+			echo $value;
+		}
 	}
 
 ?>

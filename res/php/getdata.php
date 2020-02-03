@@ -7,7 +7,7 @@
 	    //$station_files = scandir("/home/localadmin/sambashare/".$station, SCANDIR_SORT_DESCENDING);
 	    //$latest_station_files[] = "/home/localadmin/sambashare/".$station."/".station_files[0];
 	}
-    print_r($latest_station_files);
+    //print_r($latest_station_files);
 
 	//$latest_data = scandir("/home/localadmin/sambashare/".$station, SCANDIR_SORT_DESCENDING);
 	//$f = $stations[5];

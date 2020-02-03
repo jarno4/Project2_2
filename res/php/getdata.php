@@ -11,7 +11,12 @@
 
 
 	$xml = simplexml_load_file($dir);
-	print_r($xml);
+
+
+	foreach ($xml as $element) {
+	    echo $element;
+    }
+}
 
 /*
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);

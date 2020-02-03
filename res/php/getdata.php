@@ -36,15 +36,9 @@
 	}
     print_r(get_current());
 
-	$xml = simplexml_load_file(get_current()[0]);
-    echo file_get_contents(get_current()[0]);
-    echo $xml;
-
-	//$dir = "/home/localadmin/sambashare/" . $station . "/";
-
-
-	//$xml = simplexml_load_file($dir.$f);
-
+	//$xml = simplexml_load_file();
+    //echo file_get_contents(get_current()[0]);
+    echo get_current()[0];
 
 
 /*

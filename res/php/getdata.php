@@ -38,7 +38,7 @@
     print_r(get_current());
 
 	$xml = simplexml_load_file();
-    var_dump(simplexml_load_file(get_current()[0]));
+    var_dump(file_get_contents(get_current()[0]));
 
 
 /*

@@ -11,7 +11,7 @@
 
 	
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);
-	echo $get."<br>";
+	echo $get[0]."<br>";
 
 	$arr = simplexml_load_string($get);
 

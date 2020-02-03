@@ -18,7 +18,7 @@
             </div>
             <div class="table_row">
                 <div>Account type:</div>
-                <div><?php echo get_user($_SESSION['username']) ?></div>
+                <div><?php print_r(get_user($_SESSION['username'])) ?></div>
             </div>
             <div class="table_row">
                 <div>Registration date:</div>

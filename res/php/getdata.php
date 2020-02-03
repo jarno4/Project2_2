@@ -43,7 +43,7 @@
     $get = file_get_contents(get_current()[0]);
 
     $data = array();
-	parse_str($get, $data);
+	parse_str(get_current()[0], $data);
 	var_dump($data);
 
     //echo $get;

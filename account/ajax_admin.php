@@ -7,7 +7,6 @@
  */
 ?>
 <?php
-header('Content-Type: application/json');
 require 'userdb.php';
 
 if(isset($_POST['action']) && isset($_POST['naam']) ) {

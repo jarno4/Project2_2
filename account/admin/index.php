@@ -17,22 +17,27 @@
 <?php require($_SERVER["DOCUMENT_ROOT"]."/header.php") ;?>
 
 <div id="adminid" class = "header" >
-    <h2> teachers request</h2>
+    <h2>Requests for teacher accounts</h2>
 </div>
-<ul id="myul">
-    <?php
+
+<?php
      $star =mysqli_fetch_all(pending_approval());
      $num = mysqli_num_rows(pending_approval());
+     if($num!==0){
+        echo "<div class=\"profile_table\"><div class=\"table_row_\"><span><i>Username</i></span></div>";
+         for($i =0 ;$i<$num;$i++){
+            echo "<div class=\"table_row_\"><span><i>".$star[$i]['0']."</i></span><input type=\"button\" value=\"accept\" class=\"accept_decline\"><input type=\"button\" value=\"discard\" class=\"accept_decline\"></div>";
+         }
+         echo "</div>";
+     } else {
+        echo "<div class=\"profile_table\"><div class=\"table_row_\"><span><i>No requests filed.</i></span></div>";
+     }
+?>
 
 
-     for($i =0 ;$i<$num;$i++){
-        echo "<li> <span>".$star[$i]['0']."</span> <input type=\"button\" value=\"accept\" class=\"accept_decline\"><input type=\"button\" value=\"discard\" class=\"accept_decline\"></li>";
-
-    }
 
 
-    ?>
-</ul>
+</div>
 <script src="/res/js/jquery-3.4.1.min.js"></script>
 <script>
     $(".accept_decline").click(function(e) {
@@ -41,10 +46,7 @@
         let naam = $(this).parent().find("span").html();
         console.log( naam);
         var data = "action="+action+"&naam="+naam;
-        $.post("/account/ajax_admin.php", data, function(response) {
-            element.remove();
-
-        });
+        $.post("/account/ajax_admin.php", data, function() { element.remove(); });
         e.preventDefault(); //prevent default action
     });
 

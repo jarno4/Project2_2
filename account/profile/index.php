@@ -1,6 +1,6 @@
 <?php
     require '../user_session.php';
-    //require '../userdb.php';
+    require '../userdb.php';
 ;?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,7 @@
             </div>
             <div class="table_row">
                 <div>Account type:</div>
-                <div><?php print_r(get_user($_SESSION['username'])) ?></div>
+                <div><?php print_r(get_user($_SESSION['username'])[2]) ?></div>
             </div>
             <div class="table_row">
                 <div>Registration date:</div>

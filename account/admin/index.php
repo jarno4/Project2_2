@@ -36,50 +36,23 @@
 <script src="/res/js/jquery-3.4.1.min.js"></script>
 <script>
     $(".accept_decline").click(function(e) {
-        alert($(this).val());
-        /*let naam = $(this).parent().find("span").html();
+        var action = $(this).val());
+        let naam = $(this).parent().find("span").html();
         console.log( naam);
-        jQuery.ajax({
-            type: "POST",
-            url: "/account/ajax_admin.php",
-            dataType: 'json',
-            data: {functionname: 'approve_teacher', arguments: naam },
-
-
-            success: function (obj, textstatus) {
-                console.log("adasd")
-                if( !('error' in obj) ) {
-                     yourVariable= obj.result;
-                }
-                else {
-                    console.log(obj.error);
-                }
-            }
+        var data = "action="+action+"&naam="+naam;
+        $.post("/account/ajax_handler.php", data, function(response) {
+            var obj = JSON.parse(response);
+            /*
+            if(obj.status == "error"){
+                $('.error').css("display","block").html(obj.info)
+            } else {
+                $('.error').css("display","none");
+                window.location.href="/weather/current";
+            }*/
         });
-
+        e.preventDefault(); //prevent default action
     });
-    $(".decline").click(function(e) {
-        var naam = $(this).parent().find("span").html();
-        console.log( naam);
-        jQuery.ajax({
-            type: "POST",
-            url: "/account/ajax_admin.php",
-            dataType: 'json',
-            data: {functionname: 'decline_teacher', arguments: naam },
 
-
-            success: function (obj, textstatus) {
-                console.log("adasd")
-                if( !('error' in obj) ) {
-                    yourVariable= obj.result;
-                }
-                else {
-                    console.log(obj.error);
-                }
-            }
-        });
-*/
-    });
 </script>
 
 

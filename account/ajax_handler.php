@@ -2,6 +2,7 @@
 require 'userdb.php';
 //include 'user_session.php';
 error_reporting(E_ALL);
+header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $conn) {
     $username = $_POST['u'];

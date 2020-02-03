@@ -5,7 +5,7 @@
 
 	$f = $array[15];
 
-
+	print_r($f)
 
 	/*
 	$file = fopen("/home/localadmin/sambashare/" . $f, "r") or die("Unable to open file!");

@@ -44,8 +44,8 @@
 
     $data = array();
 	parse_str($get, $data);
-	var_dump($data);
 	extract($data);
+	var_dump($data);
 
     //echo $get;
 

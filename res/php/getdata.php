@@ -1,16 +1,18 @@
 <?php
+	$stations = scandir("/home/localadmin/sambashare", SCANDIR_SORT_DESCENDING);
+    $latest_station_files = array();
+	for($stations as $station){
+	    $station_files = scandir("/home/localadmin/sambashare/".$station, SCANDIR_SORT_DESCENDING);
+	    $latest_station_files[] = "/home/localadmin/sambashare/".$station."/".station_files[0];
+	}
+    print_r($latest_station_files);
+
+	//$latest_data = scandir("/home/localadmin/sambashare/".$station, SCANDIR_SORT_DESCENDING);
+	//$f = $stations[5];
+	//$dir = "/home/localadmin/sambashare/" . $station . "/". $f;
 
 
-	$stations = scandir("/home/localadmin/sambashare", 1);
-	$station = $stations[15];
-
-	$stations = scandir("/home/localadmin/sambashare/".$station, 1);
-	$f = $stations[5];
-
-	$dir = "/home/localadmin/sambashare/" . $station . "/". $f;
-
-
-	$xml = simplexml_load_file($dir);
+	//$xml = simplexml_load_file($dir);
 }
 
 /*

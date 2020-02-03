@@ -14,7 +14,7 @@
 	echo "/home/localadmin/sambashare/" . $station . "/". $f."<br>";
 	echo $get."<br>";
 
-	$arr = simplexml_load_string($get);
+	$arr = simplexml_load_string("home/localadmin/sambashare/" . $station . "/". $f);
 	print_r($arr);
 
 	/*

@@ -34,15 +34,10 @@
     	}
     	return $measurements;
 	}
-    print_r(get_current());
+    //print_r(get_current());
 
-	//$latest_data = scandir("/home/localadmin/sambashare/".$station, SCANDIR_SORT_DESCENDING);
-	//$f = $stations[5];
-	//$dir = "/home/localadmin/sambashare/" . $station . "/". $f;
-
-
-	//$xml = simplexml_load_file($dir);
-
+	$xml = simplexml_load_file(get_current()[0]);
+    print_r($xml);
 
 	//$dir = "/home/localadmin/sambashare/" . $station . "/";
 

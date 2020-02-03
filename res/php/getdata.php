@@ -42,10 +42,11 @@
 
     $get = file_get_contents(get_current()[0]);
 
-    $data = array();
-	parse_str($get, $data);
-	extract($data);
-	var_dump($data);
+	print_r(simplexml_load_file($get));
+
+    //$data = array();
+	//parse_str($get, $data);
+	//var_dump($data);
 
     //echo $get;
 

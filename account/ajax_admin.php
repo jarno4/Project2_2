@@ -20,5 +20,6 @@ if(isset($_POST['action']) && isset($_POST['naam']) ) {
             decline_teacher($_POST['naam']);
             break;
     }
+    echo "{\"status\":\"ok\"}";
 }
 ?>

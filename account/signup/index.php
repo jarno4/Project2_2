@@ -36,7 +36,9 @@
                     $('.error').css("display","block").html(obj.info);
                 } else {
                     $('.error').css("display","block").html(obj.info);
-                    //window.location.href="/weather/current";
+                    if(obj.info.includes("Logged in"){
+                        window.location.href="/weather/current";
+                    }
                 }
             });
             e.preventDefault(); //prevent default action

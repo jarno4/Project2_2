@@ -6,7 +6,7 @@
 	$stations = scandir("/home/localadmin/sambashare/".$station, 1);
 	$f = $stations[5];
 
-	$dir = "/home/localadmin/sambashare/" . $station . "/". $f;
+	$dir = "/home/localadmin/sambashare/" . $station . "/". $f."";
 	echo $dir;
 	$get = file_get_contents($dir);
 	echo $get."<br>";

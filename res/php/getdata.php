@@ -5,7 +5,7 @@
 	$station = $stations[15];
 	echo $station;
 
-	$stations = scandir("/home/localadmin/sambashare".$station, 1);
+	$stations = scandir("/home/localadmin/sambashare/".$station, 1);
 	$f = $stations[5];
 	echo $f;
 

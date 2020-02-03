@@ -42,10 +42,7 @@
 
     $arr = file_get_contents(get_current()[0]));
 
-	$domHtml = str_get_html($html);
-	foreach ($domHtml->find('TIME') as $element) {
-    	echo $element->innertext;
-	}
+	print_r($arr);
 
 /*
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);

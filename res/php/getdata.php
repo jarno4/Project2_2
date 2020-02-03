@@ -9,7 +9,14 @@
 	$f = $stations[5];
 	echo $f."<br>";
 
-	print_r("/home/localadmin/sambashare/" . $station . "/". $f);
+	$file = fopen("/home/localadmin/sambashare/" . $station . "/". $f, "r") or die("Unable to open file!");
+	echo fread($file, filesize("/home/localadmin/sambashare/" . $station . "/". $f));
+	fclose($file);
+
+
+
+
+	
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);
 	echo $get."<br>";
 

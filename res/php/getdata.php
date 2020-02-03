@@ -16,14 +16,14 @@
 	$arr = simplexml_load_string($get);
 
 
-
+	/*
 	echo $arr->MEASUREMENT[0]->DATE . "\n";
 	echo $arr->MEASUREMENT[0]->TIME . "\n";
 	echo $arr->MEASUREMENT[0]->TEMP ."\n";
 	echo $arr->MEASUREMENT[0]->WDSP . "\n";
 	echo $arr->MEASUREMENT[0]->PRCP;
 
-
+*/
 
 
 ?>

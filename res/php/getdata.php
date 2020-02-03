@@ -7,10 +7,10 @@
 	$stations = scandir("/home/localadmin/sambashare/".$station, 1);
 	$f = $stations[5];
 
-	$dir = "/home/localadmin/sambashare/" . $station . "/". $f;
+	$dir = "/home/localadmin/sambashare/" . $station . "/";
 
 
-	$xml = simplexml_load_file($dir);
+	$xml = simplexml_load_file($dir.$f);
 }
 
 /*

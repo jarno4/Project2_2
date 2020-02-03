@@ -20,7 +20,18 @@
     <h2> teachers request</h2>
 </div>
 <ul id="myul">
-    <li> <span style="display: none">teacher1</span>Pekela <button class="accept">accept</button><button class="decline">Discard</button></li>
+    <?php
+     $star =mysqli_fetch_all(pending_approval());
+     $num = mysqli_num_rows(pending_approval());
+
+
+     for($i =0 ;$i<$num;$i++){
+        echo "<li> <span>".$star[$i]['0']."</span> <button class=\"accept\">accept</button><button class=\"decline\">Discard</button></li>";
+
+    }
+
+
+    ?>
 </ul>
 <script src="/res/js/jquery-3.4.1.min.js"></script>
 <script>

@@ -51,7 +51,7 @@ function pending_approval(){
     global $conn;
     $query_string = "SELECT username FROM users WHERE request = 1";
     $query = $conn -> query($query_string);
-    $result = mysqli_fetch_row($query);
+    $result = $query;
     return $result;
 }
 function login($username){

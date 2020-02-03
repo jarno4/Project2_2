@@ -48,7 +48,9 @@
         var data = "action="+action+"&naam="+naam;
         $.post("/account/ajax_admin.php", data, function() {
             element.remove();
-            alert($(".profile_table").length);
+            if($(".profile_table").children().length == 1){
+                $("i").html("No requests filed.");
+            }
         });
         e.preventDefault(); //prevent default action
     });

@@ -15,10 +15,10 @@
 	//$xml = simplexml_load_file($dir);
 
 
-	$dir = "/home/localadmin/sambashare/" . $station . "/";
+	//$dir = "/home/localadmin/sambashare/" . $station . "/";
 
 
-	$xml = simplexml_load_file($dir.$f);
+	//$xml = simplexml_load_file($dir.$f);
 }
 
 

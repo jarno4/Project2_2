@@ -40,7 +40,7 @@
 	//$xml = simplexml_load_file();
     //print_r(new SimpleXMLElement(str_replace(":", "_", simplexml_load_file(get_current()[0]))));
 
-    echo file_get_contents(get_current()[0])->asXML;
+    print_r(simplexml_load_string(file_get_contents(get_current()[0]));
 
 /*
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);

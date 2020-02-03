@@ -42,7 +42,7 @@
 
     $arr = file_get_contents(get_current()[0]));
 
-	print_r($arr);
+	echo $arr;
 
 /*
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);

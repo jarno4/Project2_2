@@ -1,5 +1,5 @@
 <?php
-    //error_reporting(1);
+    error_reporting(E_ALL);
     print("<pre>");
 	/*
 	$base_dir = "/home/localadmin/sambashare/";

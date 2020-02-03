@@ -18,7 +18,20 @@
             </div>
             <div class="table_row">
                 <div>Account type:</div>
-                <div><?php echo get_user($_SESSION['username'])[1] ?></div>
+                <div>
+                    <?php
+                        switch (get_user($_SESSION['username'])[1]){
+                            case 0:
+                                echo "Student";
+                                break;
+                            case 1:
+                                echo "Teacher";
+                                break;
+                            case 2:
+                                echo "Admin";
+                        }
+                    ?>
+                </div>
             </div>
             <div class="table_row">
                 <div>Registration date:</div>

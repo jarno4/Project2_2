@@ -36,7 +36,7 @@
 <script src="/res/js/jquery-3.4.1.min.js"></script>
 <script>
     $(".accept").click(function(e) {
-        var naam = $(this).parent().find("span").html();
+        let naam = $(this).parent().find("span").html();
         console.log( naam);
         jQuery.ajax({
             type: "POST",
@@ -60,6 +60,23 @@
     $(".decline").click(function(e) {
         var naam = $(this).parent().find("span").html();
         console.log( naam);
+        jQuery.ajax({
+            type: "POST",
+            url: "/account/ajax_admin.php",
+            dataType: 'json',
+            data: {functionname: 'decline_teacher', arguments: naam },
+
+
+            success: function (obj, textstatus) {
+                console.log("adasd")
+                if( !('error' in obj) ) {
+                    yourVariable= obj.result;
+                }
+                else {
+                    console.log(obj.error);
+                }
+            }
+        });
 
     });
 </script>

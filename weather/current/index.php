@@ -19,12 +19,9 @@
 							<img id="weatherpicture" src="/res/img/Zon.png" >
                             <h1 id="weathertemperature"> 9°</h1>
 							<div class="weatherinfo"> <h3> Rainfall: 20% </h3><h3> wind strength: 5 </h3> 
-							<?php $fileList = glob('/home/localadmin/sambashare');
-								//Loop through the array that glob returned.
-								foreach($fileList as $filename){
-								   //Simply print them out onto the screen.
-								   echo $filename, '<br>'; 
-							} ?>
+							<?php 
+								print_r(scandir("/home/localadmin/sambashare", 1));
+							?>
 						</div> </div>
 
          		</div>

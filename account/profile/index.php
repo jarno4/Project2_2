@@ -22,7 +22,7 @@
             </div>
             <div class="table_row">
                 <div>Registration date:</div>
-                <div><?php echo get_user($_SESSION['username'])['registered'] ?></div>
+                <div><?php print_r(get_user($_SESSION['username'])) ?></div>
             </div>
         </div>
     </div>

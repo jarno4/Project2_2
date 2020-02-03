@@ -34,16 +34,12 @@ function approve_teacher($username){
     global $conn;
     $query_string = "UPDATE users SET request=0 WHERE username='$username'";
     $query = $conn -> query($query_string);
-    $result = mysqli_fetch_row($query);
-    return $result;
 }
 function decline_teacher($username)
 {
     global $conn;
     $query_string = "DELETE FROM users WHERE username='$username'";
     $query = $conn->query($query_string);
-    $result = mysqli_fetch_row($query);
-    return $result;
 }
 function pending_approval(){
     global $conn;

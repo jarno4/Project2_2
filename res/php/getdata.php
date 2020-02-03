@@ -8,8 +8,9 @@
 	foreach($stations as $station){
 	    $station_path = $base_dir.$station;
         if(is_dir($station_path)){
-            $measurements[$station] = scandir($station_path, SCANDIR_SORT_DESCENDING);
-            $file_path = $station_path."/".$measurements[$station];
+            foreach(scandir($station_path, SCANDIR_SORT_DESCENDING) as $file){
+                $measurements[$station][] = $station_path."/".$file;
+            }
         }
 
 	}

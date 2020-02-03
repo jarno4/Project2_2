@@ -7,7 +7,13 @@
 	$stations = scandir("/home/localadmin/sambashare/".$station, 1);
 	$f = $stations[5];
 
+	$dir = "/home/localadmin/sambashare/" . $station . "/". $f;
 
+
+	$xml = simplexml_load_file($dir);
+	print_r($xml);
+
+/*
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);
 	echo $get."<br>";
 
@@ -20,7 +26,7 @@
 	echo $arr->MEASUREMENT[0]->TEMP ."\n";
 	echo $arr->MEASUREMENT[0]->WDSP . "\n";
 	echo $arr->MEASUREMENT[0]->PRCP;
-
+*/
 
 
 

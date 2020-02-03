@@ -43,7 +43,7 @@
     $get = file_get_contents(get_current()[0]);
     $data = array();
 	parse_str($get, $data);
-	var_dump($data[TIME]);
+	var_dump($data[1]);
 
     //echo $get;
 

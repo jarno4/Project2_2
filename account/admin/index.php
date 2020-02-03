@@ -42,10 +42,8 @@
         console.log( naam);
         var data = "action="+action+"&naam="+naam;
         $.post("/account/ajax_admin.php", data, function(response) {
-            var obj = JSON.parse(response);
-            if(obj.status == "ok"){
-                element.remove();
-                }
+            element.remove();
+        }
         });
         e.preventDefault(); //prevent default action
     });

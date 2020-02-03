@@ -14,7 +14,7 @@
 	echo $get."<br>";
 
 	$arr = simplexml_load_string($get);
-	print_r($arr);
+	echo $arr;
 
 	/*
 	echo $arr->MEASUREMENT[0]->DATE . "\n";

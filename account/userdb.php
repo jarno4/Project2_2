@@ -37,6 +37,14 @@ function approve_teacher($username){
     $result = mysqli_fetch_row($query);
     return $result;
 }
+function decline_teacher($username)
+{
+    global $conn;
+    $query_string = "DELETE FROM users WHERE username='$username'";
+    $query = $conn->query($query_string);
+    $result = mysqli_fetch_row($query);
+    return $result;
+}
 function pending_approval(){
     global $conn;
     $query_string = "SELECT username FROM users WHERE request = 1";

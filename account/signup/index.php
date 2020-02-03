@@ -36,7 +36,7 @@
                     $('.error').css("display","block").html(obj.info);
                 } else {
                     $('.error').css("display","block").html(obj.info);
-                    if(obj.info.includes("Logged in"){
+                    if(obj.info.includes("Logged in")){
                         window.location.href="/weather/current";
                     }
                 }

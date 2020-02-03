@@ -33,10 +33,10 @@
             $.post("/account/ajax_handler.php", data, function(response) {
                 var obj = JSON.parse(response);
                 if(obj.status == "error"){
-                    $('.error').css("display","block").html(obj.info)
+                    $('.error').css("display","block").html(obj.info);
                 } else {
-                    $('.error').css("display","none");
-                    window.location.href="/weather/current";
+                    $('.error').html(obj.info);
+                    //window.location.href="/weather/current";
                 }
             });
             e.preventDefault(); //prevent default action

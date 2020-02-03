@@ -26,7 +26,7 @@
     	foreach($stations as $station){
     	    $station_path = $base_dir.$station;
             if(is_dir($station_path) && strpos($station, '726') !== false){
-                $file = scandir($station_path, SCANDIR_SORT_DESCENDING);
+                $file = scandir($station_path, SCANDIR_SORT_DESCENDING)[0];
                 $measurements[] = $station_path."/".$file;
             }
 

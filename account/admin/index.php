@@ -21,7 +21,7 @@
 </div>
 
 <?php
-     $star =mysqli_fetch_all(pending_approval());
+     $star = mysqli_fetch_all(pending_approval());
      $num = mysqli_num_rows(pending_approval());
      if($num!==0){
         echo "<div class=\"profile_table\"><div class=\"table_row_\"><span><i>Username</i></span></div>";
@@ -43,7 +43,7 @@
     $(".accept_decline").click(function(e) {
         var element = $(this).parent();
         var action = $(this).val();
-        let naam = $(this).parent().find("span").html();
+        let naam = $(this).parent().find("i").html();
         console.log( naam);
         var data = "action="+action+"&naam="+naam;
         $.post("/account/ajax_admin.php", data, function() { element.remove(); });

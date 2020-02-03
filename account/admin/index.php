@@ -46,7 +46,10 @@
         let naam = $(this).parent().find("i").html();
         console.log( naam);
         var data = "action="+action+"&naam="+naam;
-        $.post("/account/ajax_admin.php", data, function() { element.remove(); });
+        $.post("/account/ajax_admin.php", data, function() {
+            element.remove();
+            alert($(".profile_table").length);
+        });
         e.preventDefault(); //prevent default action
     });
 

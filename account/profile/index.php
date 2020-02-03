@@ -1,6 +1,6 @@
 <?php
     require '../user_session.php';
-    require '../userdb.php';
+    //require '../userdb.php';
 ;?>
 <!DOCTYPE html>
 <html lang="en">

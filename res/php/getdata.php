@@ -9,10 +9,8 @@
 	$f = $stations[5];
 	echo $f."<br>";
 
-	$file = fopen("/home/localadmin/sambashare/" . $station . "/". $f, "r") or die("Unable to open file!");
-	echo fread($file, filesize("/home/localadmin/sambashare/" . $station . "/". $f));
-	fclose($file);
-
+	$xml = simplexml_load_file("/home/localadmin/sambashare/" . $station . "/". $f);
+	print_r($xml);
 
 
 

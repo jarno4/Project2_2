@@ -43,7 +43,7 @@
         var data = "action="+action+"&naam="+naam;
         $.post("/account/ajax_admin.php", data, function(response) {
             element.remove();
-        }
+        
         });
         e.preventDefault(); //prevent default action
     });

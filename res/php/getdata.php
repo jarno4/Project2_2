@@ -1,7 +1,7 @@
 <?php 
 	//function getData(){}
-		$array = scandir("/home/localadmin/sambashare", 1);
-
+$array = scandir("/home/localadmin/sambashare", 1);
+$f = $array[15];
 		/*
 		for($i=0;$i<count($array)-1;$i++){
 			if($array[$i] == ...){

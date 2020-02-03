@@ -36,19 +36,15 @@
 <script src="/res/js/jquery-3.4.1.min.js"></script>
 <script>
     $(".accept_decline").click(function(e) {
+        var element = $(this).parent();
         var action = $(this).val();
         let naam = $(this).parent().find("span").html();
         console.log( naam);
         var data = "action="+action+"&naam="+naam;
         $.post("/account/ajax_admin.php", data, function(response) {
             var obj = JSON.parse(response);
-            /*
-            if(obj.status == "error"){
-                $('.error').css("display","block").html(obj.info)
-            } else {
-                $('.error').css("display","none");
-                window.location.href="/weather/current";
-            }*/
+            if(obj.status == "ok"){
+                element.remove();
         });
         e.preventDefault(); //prevent default action
     });

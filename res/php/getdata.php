@@ -38,7 +38,7 @@
     print_r(get_current());
 
 	$xml = simplexml_load_file();
-    var_dump(file_get_contents(get_current()[0]));
+    print_r(str_replace(":", "_", file_get_contents(get_current()[0])));
 
 
 /*

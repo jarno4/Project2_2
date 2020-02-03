@@ -40,7 +40,7 @@
         let naam = $(this).parent().find("span").html();
         console.log( naam);
         var data = "action="+action+"&naam="+naam;
-        $.post("/account/ajax_handler.php", data, function(response) {
+        $.post("/account/ajax_admin.php", data, function(response) {
             var obj = JSON.parse(response);
             /*
             if(obj.status == "error"){

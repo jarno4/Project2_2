@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $conn) {
     $form = $_POST['t']; //signin/signup
 
     switch (true){
-        case get_user($username) && get_user($username)[1] == 1:
+        case get_user($username) && get_user($username)[2] == 1:
             $msg = "{\"status\":\"error\",\"info\":\"Account is already pending approval.\"}";
             break;
 
@@ -27,10 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $conn) {
             switch ($form) {
                 case 'signin':
                     switch (true) {
-                        case !user_exists($username):
+                        case !get_user($username):
                             $msg = "{\"status\":\"error\",\"info\":\"Username does not exist.\"}";
                             break;
-                        case get_user($username)[0] == hash('sha256', $username.$password):
+                        case get_user($username)[0] == hash('sha256', $password):
                             $msg = "{\"status\":\"ok\",\"info\":\"Log in status: ".login($username)."\"}";
                             break;
                         default:
@@ -40,8 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $conn) {
 
                 case 'signup':
                     $account_type = ($_POST['r'] == 'teacher' ? 1 : 0);
-                    if(user_exists($username)) $msg = "{\"status\":\"error\",\"info\":\"Username already in use.\"}";
-                    else $msg = create_account($username, $password,$account_type) ? "{\"status\":\"ok\",\"info\":\"Account created. Log in status: ".login($username)."\"}" : "{\"status\":\"error\",\"info\":\"error_creating_account\"}";
+                    if(get_user($username)) $msg = "{\"status\":\"error\",\"info\":\"Username already in use.\"}";
+                    elseif($account_type = 0) $msg = create_account($username, $password,0) ? "{\"status\":\"ok\",\"info\":\"Account created. Log in status: ".login($username)."\"}" : "{\"status\":\"error\",\"info\":\"error_creating_account\"}";
+                    elseif($account_type = 1) $msg = create_account($username, $password,1) ? "{\"status\":\"ok\",\"info\":\"Account created. Pending approval."\"}" : "{\"status\":\"error\",\"info\":\"error_creating_account\"}";
                     break;
 
                 default:

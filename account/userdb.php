@@ -10,7 +10,7 @@ $conn = new mysqli($db_server, $db_username, $db_password, $db_name);
 
 function get_user($username){
     global $conn;
-    $query_string = "SELECT 'user_hash', 'request', 'type', 'registered' FROM users WHERE username='$username'";
+    $query_string = "SELECT password, type, request, registered FROM users WHERE username='$username'";
     $query = $conn -> query($query_string) or $query=false;
     if($query){
         $result = mysqli_fetch_row($query);
@@ -24,18 +24,9 @@ function get_user($username){
 function create_account($username, $password, $type){
     global $conn;
     $password_sha256 = hash('sha256', $password);
-    $user_hash_sha256 = hash('sha256', $username.$password);
     $request = ($type==1 ? 1:0);
-    $query_string = "INSERT INTO users (`username`,`password`,`user_hash`,`type`,`request`) VALUES('$username', '$password_sha256', '$user_hash_sha256', '$type', '$request')";
+    $query_string = "INSERT INTO users (`username`,`password`,`type`,`request`) VALUES('$username', '$password_sha256', '$type', '$request')";
     $result = $conn -> query($query_string);
-    return $result;
-}
-
-function user_exists($username){
-    global $conn;
-    $query_string = "SELECT count(id) FROM users WHERE username='$username'";
-    $query = $conn -> query($query_string);
-    $result = mysqli_fetch_row($query)[0];
     return $result;
 }
 
@@ -44,7 +35,6 @@ function approve_teacher($username){
     $query_string = "UPDATE users SET request=0 WHERE username='$username'";
     $query = $conn -> query($query_string);
     $result = mysqli_fetch_row($query);
-    console.log("dit wordt wel gerund");
     return $result;
 }
 function pending_approval(){

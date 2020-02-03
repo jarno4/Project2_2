@@ -18,11 +18,11 @@
             </div>
             <div class="table_row">
                 <div>Account type:</div>
-                <div><?php echo get_user($_SESSION['username'])[3] ?></div>
+                <div><?php echo get_user($_SESSION['username'])['type'] ?></div>
             </div>
             <div class="table_row">
                 <div>Registration date:</div>
-                <div><?php echo get_user($_SESSION['username'])[3] ?></div>
+                <div><?php echo get_user($_SESSION['username'])['registered'] ?></div>
             </div>
         </div>
     </div>

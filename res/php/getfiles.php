@@ -11,4 +11,8 @@
 	$arr = simplexml_load_string($get);
 	print_r($arr[0][1]);
 
+	foreach ($arr as $key => $value) {
+		echo $key;
+	}
+
 ?>

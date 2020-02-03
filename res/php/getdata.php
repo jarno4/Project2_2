@@ -17,6 +17,13 @@
 	//$xml = simplexml_load_file($dir);
 
 
+	$dir = "/home/localadmin/sambashare/" . $station . "/";
+
+
+	$xml = simplexml_load_file($dir.$f);
+}
+
+
 /*
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);
 	echo $get."<br>";

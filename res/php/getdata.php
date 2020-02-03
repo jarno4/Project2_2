@@ -1,5 +1,5 @@
 <?php 
-	function getData(){}
+	//function getData(){}
 		$array = scandir("/home/localadmin/sambashare", 1);
 
 		/*
@@ -20,7 +20,7 @@
 		echo $arr->MEASUREMENT[0]->WDSP . "\n";
 		echo $arr->MEASUREMENT[0]->PRCP;
 
-}
+//}
 
-echo getData();
+//echo getData();
 ?>

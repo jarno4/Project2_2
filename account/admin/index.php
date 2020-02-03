@@ -26,7 +26,7 @@
 
 
      for($i =0 ;$i<$num;$i++){
-        echo "<li> <span>".$star[$i]['0']."</span> <input value=\"accept\" class=\"accept_decline\"><input value=\"discard\" class=\"accept_decline\"></li>";
+        echo "<li> <span>".$star[$i]['0']."</span> <input type=\"button\" value=\"accept\" class=\"accept_decline\"><input type=\"button\" value=\"discard\" class=\"accept_decline\"></li>";
 
     }
 

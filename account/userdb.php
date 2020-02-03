@@ -10,7 +10,7 @@ $conn = new mysqli($db_server, $db_username, $db_password, $db_name);
 
 function get_user($username){
     global $conn;
-    $query_string = "SELECT user_hash, request, type FROM users WHERE username='$username'";
+    $query_string = "SELECT user_hash, request, type, registration FROM users WHERE username='$username'";
     $query = $conn -> query($query_string) or $query=false;
     if($query){
         $result = mysqli_fetch_row($query);
@@ -42,6 +42,14 @@ function user_exists($username){
 function approve_teacher($username){
     global $conn;
     $query_string = "UPDATE users SET request=0 WHERE username='$username'";
+    $query = $conn -> query($query_string);
+    $result = mysqli_fetch_row($query);
+    console.log("dit wordt wel gerund");
+    return $result;
+}
+function pending_approval(){
+    global $conn;
+    $query_string = "SELECT username FROM users WHERE request = 1";
     $query = $conn -> query($query_string);
     $result = mysqli_fetch_row($query);
     return $result;

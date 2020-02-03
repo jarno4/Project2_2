@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['username'] = "test123";
+$_SESSION['username'] = "user1";
 function test($word){
     return $word;
 }

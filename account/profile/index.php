@@ -1,4 +1,7 @@
-<?php require '../user_session.php';?>
+<?php
+    require '../user_session.php';
+    //require '../userdb.php';
+;?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,15 +14,15 @@
         <div class="profile_table">
             <div class="table_row">
                 <div>Username:</div>
-                <div>33</div>
+                <div><?php echo $_SESSION['username'] ?></div>
             </div>
             <div class="table_row">
                 <div>Account type:</div>
-                <div>33</div>
+                <div><?php echo get_user($_SESSION['username'])[2] ?></div>
             </div>
             <div class="table_row">
                 <div>Registration date:</div>
-                <div>33</div>
+                <div><?php echo get_user($_SESSION['username'])[3] ?></div>
             </div>
         </div>
     </div>

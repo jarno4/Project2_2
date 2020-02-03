@@ -45,6 +45,7 @@
             var obj = JSON.parse(response);
             if(obj.status == "ok"){
                 element.remove();
+                }
         });
         e.preventDefault(); //prevent default action
     });

@@ -7,7 +7,7 @@
     //print_r($stations);
 	foreach($stations as $station){
 	    $station_path = $base_dir.$station;
-        if(is_dir($station_path) && strpos($station, '726')){
+        if(is_dir($station_path) && strpos($station, '726')>==0){
             foreach(scandir($station_path, SCANDIR_SORT_DESCENDING) as $file){
                 $measurements[$station][] = $station_path."/".$file;
             }

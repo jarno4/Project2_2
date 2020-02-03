@@ -9,7 +9,7 @@
 	$f = $stations[5];
 	echo $f."<br>";
 
-	
+	print_r("/home/localadmin/sambashare/" . $station . "/". $f);
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);
 	echo $get."<br>";
 

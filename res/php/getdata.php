@@ -3,10 +3,11 @@
 	
 	print_r($array);
 
-	$f = $array[15];
+	$station = $array[15];
+	$f = $station[15];
 
 	
-	$get = file_get_contents("/home/localadmin/sambashare/" . $f);
+	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);
 	echo $get;
 	$arr = simplexml_load_string($get);
 	print_r($arr);

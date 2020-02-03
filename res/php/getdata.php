@@ -1,10 +1,12 @@
-<?php 
-	$array = scandir("/home/localadmin/sambashare", 1);
-	
-	print_r($array);
+<?php
 
-	$station = $array[15];
-	$f = $station[15];
+
+	$stations = scandir("/home/localadmin/sambashare", 1);
+	$station = $stations[15];
+
+	$stations = scandir("/home/localadmin/sambashare".$station, 1);
+	print_r($stations);
+	$f = $stations[5];
 
 	
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);

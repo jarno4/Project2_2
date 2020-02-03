@@ -20,7 +20,7 @@
                             <h1 id="weathertemperature"> 9°</h1>
 							<div class="weatherinfo"> <h3> Rainfall: 20% </h3><h3> wind strength: 5 </h3> 
 							<?php 
-								print_r(scandir("/home/localadmin/sambashare", 1));
+								print_r(scandir("/", 1));
 							?>
 						</div> </div>
 

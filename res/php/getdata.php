@@ -11,11 +11,11 @@
 
 	
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);
-	echo $get[0]."<br>";
+	echo $get."<br>";
 
 	$arr = simplexml_load_string($get);
 
-
+	print_r($arr);
 	/*
 	echo $arr->MEASUREMENT[0]->DATE . "\n";
 	echo $arr->MEASUREMENT[0]->TIME . "\n";

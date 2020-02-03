@@ -1,5 +1,5 @@
 <?php
-    error_reporting(1);
+    //error_reporting(1);
     print("<pre>");
 	/*
 	$base_dir = "/home/localadmin/sambashare/";
@@ -38,7 +38,7 @@
     print_r(get_current());
 
 	$xml = simplexml_load_file();
-    echo file_get_contents(get_current()[0]);
+    var_dump(simplexml_load_file(get_current()[0]));
 
 
 /*

@@ -7,6 +7,7 @@
  */
 ?>
 <?php session_start();
+include '../userdb.php';
 if(get_user($_SESSION['username'][1])!==2){
         header('HTTP/1.0 403 Forbidden');
         echo '403 FORBIDDEN';

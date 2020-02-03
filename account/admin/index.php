@@ -36,7 +36,7 @@
 <script src="/res/js/jquery-3.4.1.min.js"></script>
 <script>
     $(".accept_decline").click(function(e) {
-        alert($(this.val()));
+        alert($(this).val());
         /*let naam = $(this).parent().find("span").html();
         console.log( naam);
         jQuery.ajax({

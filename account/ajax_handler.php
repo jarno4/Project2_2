@@ -42,8 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $conn) {
                     $account_type = ($_POST['r'] == 'teacher' ? 1 : 0);
                     if(get_user($username)) $msg = "{\"status\":\"error\",\"info\":\"Username already in use\"}";
                     else {
-                        if (account_type == 1) $msg = create_account($username, $password,$account_type) ? "{\"status\":\"ok\",\"info\":\"Account created. Pending Approval"\"}" : "{\"status\":\"error\",\"info\":\"error_creating_account\"}";
-                        else $msg = create_account($username, $password,$account_type) ? "{\"status\":\"ok\",\"info\":\"Account created. Logged in"\"}" : "{\"status\":\"error\",\"info\":\"error_creating_account\"}";
+                        if (account_type == 1) $msg = create_account($username, $password,$account_type) ? "{\"status\":\"ok\",\"info\":\"Account created. Pending Approval\"}" : "{\"status\":\"error\",\"info\":\"error_creating_account\"}";
+                        else $msg = create_account($username, $password,$account_type) ? "{\"status\":\"ok\",\"info\":\"Account created. Logged in\"}" : "{\"status\":\"error\",\"info\":\"error_creating_account\"}";
                     }
                     break;
 

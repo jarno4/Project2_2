@@ -40,8 +40,12 @@
 	//$xml = simplexml_load_file();
     //print_r(new SimpleXMLElement(str_replace(":", "_", simplexml_load_file(get_current()[0]))));
 
-    print_r(file_get_contents(get_current()[0][TIME]));
+    $arr = file_get_contents(get_current()[0]));
 
+	$domHtml = str_get_html($html);
+	foreach ($domHtml->find('TIME') as $element) {
+    	echo $element->innertext;
+	}
 
 /*
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);

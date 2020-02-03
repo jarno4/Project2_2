@@ -10,7 +10,6 @@
 	echo $f;
 
 	
-	/*
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);
 	echo $get;
 	$arr = simplexml_load_string($get);

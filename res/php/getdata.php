@@ -40,25 +40,9 @@
 	//$xml = simplexml_load_file();
     //print_r(new SimpleXMLElement(str_replace(":", "_", simplexml_load_file(get_current()[0]))));
 
-    function curl_get_file_contents($URL)
-		{
-        $c = curl_init();
-        curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($c, CURLOPT_URL, $URL);
-        $contents = curl_exec($c);
-        curl_close($c);
+    $get = file_get_contents(get_current()[0]);
 
-        if ($contents) return $contents;
-            else return FALSE;
- 		}
-
-		$xmlString = curl_get_file_contents(get_current()[0]);
-		$xml = simplexml_load_string($xmlString);
-		var_dump($xml); 
-
-    //$get = file_get_contents(get_current()[0]);
-
-    //echo $get;
+    echo $get[1];
 
 /*
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);

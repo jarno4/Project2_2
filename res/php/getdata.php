@@ -38,8 +38,9 @@
     print_r(get_current());
 
 	//$xml = simplexml_load_file();
-    print_r(new SimpleXMLElement(str_replace(":", "_", simplexml_load_file(get_current()[0]))));
+    //print_r(new SimpleXMLElement(str_replace(":", "_", simplexml_load_file(get_current()[0]))));
 
+    print_r(file_get_contents(get_current()[0]));
 
 /*
 	$get = file_get_contents("/home/localadmin/sambashare/" . $station . "/". $f);

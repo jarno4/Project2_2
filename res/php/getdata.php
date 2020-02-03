@@ -9,10 +9,9 @@
 	    $station_path = $base_dir.$station;
         if(is_dir($station_path)){
             $measurements[$station] = scandir($station_path, SCANDIR_SORT_DESCENDING);
+            $file_path = $station_path."/".$measurements[$station];
         }
-	    //print_r($station);
-	    //$station_files = scandir("/home/localadmin/sambashare/".$station, SCANDIR_SORT_DESCENDING);
-	    //$latest_station_files[] = "/home/localadmin/sambashare/".$station."/".station_files[0];
+
 	}
 	print_r($measurements);
     //print_r($latest_station_files);

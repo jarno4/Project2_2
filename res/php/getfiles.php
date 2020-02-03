@@ -10,7 +10,8 @@
 
 	$get = file_get_contents("/home/localadmin/sambashare/" . $f);
 	$arr = simplexml_load_string($get);
-	print_r($arr[1]);
+	print_r("$arr -> MEASUREMENT -> DATE");
+
 
 
 ?>

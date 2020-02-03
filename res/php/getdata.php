@@ -11,11 +11,6 @@
 
 
 	$xml = simplexml_load_file($dir);
-
-
-	foreach ($xml as $element) {
-	    echo $element;
-    }
 }
 
 /*

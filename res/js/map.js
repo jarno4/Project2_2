@@ -29,10 +29,11 @@ $("path").mousemove(function(e){
         $("#tab1").children("a").css('border-bottom-color', '#f1f1f1');
         $("#temperatuurg").show();
         $.get("/res/php/getdata.php", function(response) {
-            $(".temp").html($.parseJSON(response)[0][3]);
-            $(".wind_speed").html($.parseJSON(response)[0][8]);
-            $(".rain").html($.parseJSON(response)[0][9]);
-            $(".wind_direction").html($.parseJSON(response)[0][13]);
+            var data = $.parseJSON(response);
+            $(".temp").find("span").html(data[0][3]);
+            $(".wind_speed").find("span").html(data[0][8]);
+            $(".rain").find("span").html(data[0][9]);
+            $(".wind_direction").find("span").html(data[0][13]);
         });
     }
 });

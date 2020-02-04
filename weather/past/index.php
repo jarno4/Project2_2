@@ -22,8 +22,19 @@
 					        <canvas id="temperatuurg"></canvas>
 					        <canvas id="regenvalg"></canvas>
 					        <canvas id="windsterkteg"></canvas>
-					        <?php
-					        //echo file_get_contents("1580775695138.txt");
+
+                            <a href="newfilex.xml" download>
+					            <button id="xmlbutton"> Download XML </button>
+                            </a>
+				         		</div>
+							</div>
+					        <script src="/res/js/jquery-3.4.1.min.js"></script>
+							<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+							<script type="text/javascript" src="/res/js/map.js" ></script>
+							<script type="text/javascript" src="/res/js/graph.js" ></script>
+
+							<?php
+							        //echo file_get_contents("1580775695138.txt");
 							$myFile = "/home/localadmin/sambashare/726770/1580775683471.txt";
 							$lines = file($myFile);//file in to an array
 							$myArray  = array();;
@@ -32,9 +43,6 @@
 							{  $myArray[]=$line;
 
 							}
-
-							//print_r($myArray);
-
 
 							$myfile = fopen("newfilex.xml", "w") or die("Unable to open file!");
 
@@ -73,15 +81,5 @@
 
 							fclose($myfile);
 							?>
-
-                            <a href="newfilex.xml" download>
-					            <button id="xmlbutton"> Download XML </button>
-                            </a>
-         		</div>
-			</div>
-        <script src="/res/js/jquery-3.4.1.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-		<script type="text/javascript" src="/res/js/map.js" ></script>
-		<script type="text/javascript" src="/res/js/graph.js" ></script>
 	</body>
 	</html>

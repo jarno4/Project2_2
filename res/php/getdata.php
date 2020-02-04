@@ -44,8 +44,7 @@
     //print_r(new SimpleXMLElement(str_replace(":", "_", simplexml_load_file(get_current()[0]))));
     <your_xml_content>
     $get = file_get_contents(get_current()[0]);
-    $arr = simplexml_load_string($get);
-    print_r($arr);
+    print_r($get);
 	</your_xml_content>
 
     //echo $get;

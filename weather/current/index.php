@@ -16,7 +16,6 @@
 				<div class="graph">
 					<h2 id="sideheader"> Please select a province </h2>
 						<div class="weatherdata">
-							<img id="weatherpicture" src="/res/img/Zon.png" >
                             <h1 id="weathertemperature"> 9°</h1>
 							<div class="weatherinfo"> <h3> Rainfall: 20% </h3><h3> wind strength: 5 </h3> 
 							<?php 
@@ -31,8 +30,6 @@
 									}
 
 									print_r($myArray);
-									$xml = simplexml_load_string($myArray);
-									print_r($xml);
 							?>
 						</div> </div>
 

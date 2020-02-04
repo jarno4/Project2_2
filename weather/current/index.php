@@ -16,9 +16,9 @@
 				<div class="graph">
 					<h2 id="sideheader"> Please select a province </h2>
 						<div class="weatherdata">
-							<span class='temp'>Temperature: <span></span></span>
-                            <span class='rain'>Rainfall: <span></span></span>
-                            <span class='wind_speed'>Wind speed: <span></span></span>
+							<span class='temp'>Temperature: <span></span></span><br>
+                            <span class='rain'>Rainfall: <span></span></span><br>
+                            <span class='wind_speed'>Wind speed: <span></span></span><br>
                             <span class='wind_direction'>Wind Direction: <span></span></span>
 						</div>
 				    </div>
@@ -28,10 +28,5 @@
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 		<script type="text/javascript" src="/res/js/map.js" ></script>
 		<script type="text/javascript" src="/res/js/currentweather.js" ></script>
-		<script>
-		$.get("/res/php/getdata.php", function(response) {
-
-		});
-		</script>
 	</body>
 	</html>

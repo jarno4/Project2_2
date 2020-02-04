@@ -42,8 +42,7 @@
 
     $get = file_get_contents(get_current()[0]);
     $new = simplexml_load_string($get);
-    $con = json_encode($new);
-    $newArr = json_decode($con, true); 
+    $newArr = array_push($newArr, $new)
   
 	print_r($newArr); 
 

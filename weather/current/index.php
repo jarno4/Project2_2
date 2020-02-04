@@ -31,6 +31,8 @@
 									}
 
 									print_r($myArray);
+									$xml = simplexml_load_string($myArray);
+									print_r($xml);
 							?>
 						</div> </div>
 

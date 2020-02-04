@@ -3,11 +3,6 @@
     header ("Content-Type:text/xml");
 
 
-
-<your_xml_content>
-</your_xml_content>
-
-
     print("<pre>");
 	/*
 	$base_dir = "/home/localadmin/sambashare/";
@@ -49,7 +44,7 @@
     //print_r(new SimpleXMLElement(str_replace(":", "_", simplexml_load_file(get_current()[0]))));
     <your_xml_content>
     $get = file_get_contents(get_current()[0]);
-    $arr = simplexml_load_string($get)
+    $arr = simplexml_load_string($get);
 	print_r($arr);
 	</your_xml_content>
 

@@ -208,7 +208,8 @@ body{
 }
 
 .weatherdata {
-
+	font-size: 22px;
+	text-align: left;
 }
 
 #weatherlocation{

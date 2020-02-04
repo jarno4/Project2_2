@@ -17,6 +17,7 @@ $("path").mousemove(function(e){
         $("canvas").hide();
         $(".tab").hide();
         $("#tabs").css('border-bottom', 'none');
+        $(".weatherdata").hide();
     } else {
         $("path").removeClass('active');
         $("#tabs").css('border-bottom', '1px solid #CCC');
@@ -29,6 +30,7 @@ $("path").mousemove(function(e){
         $("#tab1").children("a").css('background', '#f1f1f1');
         $("#tab1").children("a").css('border-bottom-color', '#f1f1f1');
         $("#temperatuurg").show();
+        $(".weatherdata").show();
         $.get("/res/php/getdata.php", function(response) {
             var provinces = ["CN-54_3","NP-BA","NP-BH","NP-DH","NP-GA","NP-JA","NP-KA","NP-KO","NP-LU","NP-MA","NP-ME","NP-NA","NP-RA","NP-SA","NP-SE","BT-11","BT-13","BT-14","IN-WB","IN-UT","IN-UP","IN-SK","IN-ML","IN-BR","IN-AS","IN-BD","BD-C","BD-E","BD-F"]
             var index = provinces.indexOf(element.attr('id'));

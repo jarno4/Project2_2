@@ -37,17 +37,23 @@
     	}
     	return $measurements;
 	}
-    print_r(get_current());
+    //print_r(get_current());
 
 	//$xml = simplexml_load_file();
     //print_r(new SimpleXMLElement(str_replace(":", "_", simplexml_load_file(get_current()[0]))));
     
     $get = file_get_contents(get_current()[0]);
     
+    $myArray  = array();
 
-	foreach($lines as $line) 
-	{  $myArray[]=$line;}
-	$myArray  = array();
+	foreach($measurements as $station_data){
+		foreach(file_get_contents($station_data) as $line) {  
+			$myArray[] = $line;
+
+		}		
+	}
+	
+	
 	print_r($myArray);
 
 

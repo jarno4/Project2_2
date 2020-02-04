@@ -43,7 +43,13 @@
     //print_r(new SimpleXMLElement(str_replace(":", "_", simplexml_load_file(get_current()[0]))));
     
     $get = file_get_contents(get_current()[0]);
-    print_r($get);
+    
+
+	foreach($lines as $line) 
+	{  $myArray[]=$line;}
+	$myArray  = array();
+	print_r($myArray);
+
 
 
     //echo $get;

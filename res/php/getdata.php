@@ -1,8 +1,4 @@
 <?php
-    error_reporting(E_ALL);
-
-
-    print("<pre>");
 	/*
 	$base_dir = "/home/localadmin/sambashare/";
 	$stations = scandir($base_dir, SCANDIR_SORT_DESCENDING);
@@ -54,7 +50,7 @@
 	}
 	
 	
-	print_r($myArray);
+	echo json_encode($myArray);
 
 
 
@@ -74,7 +70,5 @@
 	echo $arr->MEASUREMENT[0]->WDSP . "\n";
 	echo $arr->MEASUREMENT[0]->PRCP;
 */
-
-print("</pre>");
 
 ?>

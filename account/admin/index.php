@@ -23,6 +23,7 @@
 </div>
 
 <?php
+    require_once($_SERVER["DOCUMENT_ROOT"].'/account/userdb.php');
     if(get_user($_SESSION['username'])[1]!==2){
             header('HTTP/1.0 403 Forbidden');
             echo 'NOT AUTHORIZED';

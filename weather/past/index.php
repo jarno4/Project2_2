@@ -15,9 +15,9 @@
 				<div class="graph">
 					<h2 id="sideheader"> Please select a province </h2>
 						<ul id="tabs">
-					      	<li class="tab" id="tab1"><a href="#temperatuur">Temperatuur</a></li>
-					      	<li class="tab" id="tab2"><a href="#regenval">Regenval</a></li>
-					      	<li class="tab" id="tab3"><a href="#windsterkte">Windsterkte</a></li>
+					      	<li class="tab" id="tab1"><a href="#temperatuur">Temperature</a></li>
+					      	<li class="tab" id="tab2"><a href="#regenval">Rainfall</a></li>
+					      	<li class="tab" id="tab3"><a href="#windsterkte">Windstrength</a></li>
 						</ul>
 					        <canvas id="temperatuurg"></canvas>
 					        <canvas id="regenvalg"></canvas>

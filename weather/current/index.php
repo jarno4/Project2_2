@@ -16,28 +16,22 @@
 				<div class="graph">
 					<h2 id="sideheader"> Please select a province </h2>
 						<div class="weatherdata">
-                            <h1 id="weathertemperature"> 9°</h1>
-							<div class="weatherinfo"> <h3> Rainfall: 20% </h3><h3> wind strength: 5 </h3> 
-							<?php 
-								//echo file_get_contents("1580775695138.txt");
-									$myFile = "/home/localadmin/sambashare/723805/1580775764166.txt";
-									$lines = file($myFile);//file in to an array
-									$myArray  = array();;
-
-									foreach($lines as $line) 
-									{  $myArray[]=$line;
-
-									}
-
-									print_r($myArray);
-							?>
-						</div> </div>
-
+							<span class='temp'>Temperature: <span></span></span>
+                            <span class='rain'>Rainfall: <span></span></span>
+                            <span class='wind_strength'>Wind strength: <span></span></span>
+                            <span class='wind_direction'>Wind Direction: <span></span></span>
+						</div>
+				    </div>
          		</div>
 			</div>
         <script src="/res/js/jquery-3.4.1.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 		<script type="text/javascript" src="/res/js/map.js" ></script>
 		<script type="text/javascript" src="/res/js/currentweather.js" ></script>
+		<script>
+		$.get("/account/ajax_handler.php", function(response) {
+		    alert(response);
+		});
+		</script>
 	</body>
 	</html>

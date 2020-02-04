@@ -1,6 +1,5 @@
 <?php
     error_reporting(E_ALL);
-    header ("Content-Type:text/xml");
 
 
     print("<pre>");
@@ -42,10 +41,10 @@
 
 	//$xml = simplexml_load_file();
     //print_r(new SimpleXMLElement(str_replace(":", "_", simplexml_load_file(get_current()[0]))));
-    <your_xml_content>
+    
     $get = file_get_contents(get_current()[0]);
     print_r($get);
-	</your_xml_content>
+
 
     //echo $get;
 

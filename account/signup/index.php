@@ -68,6 +68,12 @@
                 $(".submit_button").removeAttr("disabled");
             }
         }
+        $(document).keypress(function(event){
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if(keycode == '13' && $('.submit_button').prop('disabled')){
+                $(".submit_button").click();
+            }
+        });
     </script>
 </body>
 </html>

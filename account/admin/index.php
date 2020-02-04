@@ -24,7 +24,8 @@
 
 <?php
     require_once($_SERVER["DOCUMENT_ROOT"].'/account/userdb.php');
-    if(get_user($_SESSION['username'])[1]!==2){
+    $is_admin = get_user($_SESSION['username'])[1] == 2 ? true : false;
+    if(!$is_admin){
             header('HTTP/1.0 403 Forbidden');
             echo 'NOT AUTHORIZED';
             exit();

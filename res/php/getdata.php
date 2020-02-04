@@ -42,11 +42,11 @@
 	//$xml = simplexml_load_file();
     //print_r(new SimpleXMLElement(str_replace(":", "_", simplexml_load_file(get_current()[0]))));
     
-    $get = file_get_contents(get_current()[0]);
+    //$get = file_get_contents(get_current()[0]);
     
     $myArray  = array();
 
-	foreach($measurements as $station_data){
+	foreach(get_current() as $station_data){
 		foreach(file_get_contents($station_data) as $line) {  
 			$myArray[] = $line;
 

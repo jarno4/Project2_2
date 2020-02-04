@@ -50,7 +50,7 @@
 	}
 	
 	
-	echo json_encode($myArray);
+	var_dump(json_encode($myArray));
 
 
 

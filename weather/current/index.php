@@ -30,7 +30,7 @@
 		<script type="text/javascript" src="/res/js/currentweather.js" ></script>
 		<script>
 		$.get("/res/php/getdata.php", function(response) {
-		    alert(response);
+
 		});
 		</script>
 	</body>

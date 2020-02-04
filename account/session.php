@@ -1,4 +1,4 @@
 <?php
-echo "x<br>";
+session_start();
 print_r($_SESSION);
 ?>

@@ -29,7 +29,7 @@ $("path").mousemove(function(e){
         $("#tab1").children("a").css('border-bottom-color', '#f1f1f1');
         $("#temperatuurg").show();
         $.get("/res/php/getdata.php", function(response) {
-            alert(JSON.parse(response));
+            alert($.parseJSON(response));
         });
     }
 });

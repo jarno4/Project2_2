@@ -11,6 +11,7 @@ $("path").mousemove(function(e){
     $("#tip").removeClass("active");
 }).click( function(){
     if($(this).hasClass('active')) {
+        var element = $(this);
         $(this).removeClass('active');
         $("#sideheader").html('Please select a province');
         $("canvas").hide();
@@ -30,8 +31,8 @@ $("path").mousemove(function(e){
         $("#temperatuurg").show();
         $.get("/res/php/getdata.php", function(response) {
             var provinces = ["CN-54_3","NP-BA","NP-BH","NP-DH","NP-GA","NP-JA","NP-KA","NP-KO","NP-LU","NP-MA","NP-ME","NP-NA","NP-RA","NP-SA","NP-SE","BT-11","BT-12","BT-13","BT-14","BT-15","BT-22","BT-23","BT-24","BT-GA","BT-14","IN-WB","IN-UT","IN-UP","IN-SK","IN-ML","IN-BR","IN-AS","IN-BD","BD-C","BD-E","BD-F"]
-            var index = provinces.indexOf($(this).attr('id'));
-            console.log($(this));
+            var index = provinces.indexOf(element.attr('id'));
+            console.log(element.attr("id"));
             var data = $.parseJSON(response)[index];
             $(".temp").find("span").html(data[3]);
             $(".wind_speed").find("span").html(data[8]);

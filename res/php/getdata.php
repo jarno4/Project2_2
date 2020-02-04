@@ -46,9 +46,8 @@
     
     $myArray  = array();
     $i = 0;
-    print_r(get_current());
 	foreach(get_current() as $station_data){
-		foreach(file_get_contents($station_data) as $line) {  
+		foreach(file($station_data) as $line) {  
 			$myArray[$i][] = $line;
 		}	
 		$i++;	

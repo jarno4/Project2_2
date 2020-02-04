@@ -54,8 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $conn) {
             break;
     }
 } else {
-    header('HTTP/1.0 403 Forbidden');
-    echo '403 FORBIDDEN';
+    //header('HTTP/1.0 403 Forbidden');
+    //echo '403 FORBIDDEN';
 }
 echo $msg;
 $conn -> close();

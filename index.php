@@ -20,8 +20,8 @@
                 </div>
             </div>
             <div class="content">
-                <span class="intro">Welcome to the weather application of</span>
-                <span class="subtitle">Parivartan Nepal</span>
+                <span class="intro">Parivartan Nepal</span>
+                <span class="subtitle">Welcome to our weather application</span>
                 <a class="get_started" href="/weather">GET STARTED</a>
             </div>
         </div>

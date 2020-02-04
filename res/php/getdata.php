@@ -41,9 +41,17 @@
     //print_r(new SimpleXMLElement(str_replace(":", "_", simplexml_load_file(get_current()[0]))));
 
     $get = file_get_contents(get_current()[0]);
-    $data = array();
-	parse_str($get, $data);
-	print_r($data);
+    $new = simplexml_load_string($get);
+    $con = json_encode($new);
+    $newArr = json_decode($con, true); 
+  
+	print_r($newArr); 
+
+
+
+    //$data = array();
+	//parse_str($get, $data);
+	//print_r($data);
 
     //echo $get;
 

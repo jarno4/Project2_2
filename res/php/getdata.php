@@ -28,9 +28,9 @@
         $measurements = array();
     	foreach($stations as $station){
     	    $station_path = $base_dir.$station;
-            if(is_dir($station_path) && strpos($station, '726') !== false){
+            if(is_dir($station_path) && strpos($station, '72') !== false){
                 $file = scandir($station_path, SCANDIR_SORT_DESCENDING)[0];
-                if(strpos($file, '.xml') !== false){
+                if(strpos($file, '.txt') !== false){
                     $measurements[] = $station_path."/".$file;
                 }
             }

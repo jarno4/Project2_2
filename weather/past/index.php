@@ -23,7 +23,7 @@
 					        <canvas id="regenvalg"></canvas>
 					        <canvas id="windsterkteg"></canvas>
 
-                            <a href="newfilex.xml" download>
+                            <a href="/newfilex.xml" download>
 					            <button id="xmlbutton"> Download XML </button>
                             </a>
 				         		</div>

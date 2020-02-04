@@ -41,13 +41,9 @@
     //print_r(new SimpleXMLElement(str_replace(":", "_", simplexml_load_file(get_current()[0]))));
 
     $get = file_get_contents(get_current()[0]);
-    print_r(simplexml_load_file($get));
-
-
-
-    //$data = array();
-	//parse_str($get, $data);
-	//print_r($data);
+    $data = array();
+	parse_str($get, $data);
+	print_r($data);
 
     //echo $get;
 

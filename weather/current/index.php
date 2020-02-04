@@ -18,7 +18,7 @@
 						<div class="weatherdata">
 							<span class='temp'>Temperature: <span></span></span>
                             <span class='rain'>Rainfall: <span></span></span>
-                            <span class='wind_strength'>Wind strength: <span></span></span>
+                            <span class='wind_speed'>Wind speed: <span></span></span>
                             <span class='wind_direction'>Wind Direction: <span></span></span>
 						</div>
 				    </div>

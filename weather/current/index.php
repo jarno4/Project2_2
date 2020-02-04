@@ -20,7 +20,17 @@
                             <h1 id="weathertemperature"> 9°</h1>
 							<div class="weatherinfo"> <h3> Rainfall: 20% </h3><h3> wind strength: 5 </h3> 
 							<?php 
-								
+								//echo file_get_contents("1580775695138.txt");
+									$myFile = "/home/localadmin/sambashare/723805/1580775764166.txt";
+									$lines = file($myFile);//file in to an array
+									$myArray  = array();;
+
+									foreach($lines as $line) 
+									{  $myArray[]=$line;
+
+									}
+
+									print_r($myArray);
 							?>
 						</div> </div>
 

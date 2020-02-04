@@ -10,8 +10,8 @@ $("path").mousemove(function(e){
 }).mouseleave(function(){
     $("#tip").removeClass("active");
 }).click( function(){
+    var element = $(this);
     if($(this).hasClass('active')) {
-        var element = $(this);
         $(this).removeClass('active');
         $("#sideheader").html('Please select a province');
         $("canvas").hide();

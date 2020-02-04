@@ -45,12 +45,12 @@
     //$get = file_get_contents(get_current()[0]);
     
     $myArray  = array();
-
+    $i = 0;
 	foreach(get_current() as $station_data){
 		foreach(file_get_contents($station_data) as $line) {  
-			$myArray[] = $line;
-
-		}		
+			$myArray[$i][] = $line;
+		}	
+		$i++;	
 	}
 	
 	

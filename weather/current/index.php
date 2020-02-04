@@ -15,7 +15,7 @@
 			</div>
 				<div class="graph">
 					<h2 id="sideheader"> Please select a province </h2>
-						<div class="weatherdata">
+						<div class="weatherdata" style="display: none;">
 							<span class='temp'>Temperature: <span></span></span><br>
                             <span class='rain'>Rainfall: <span></span></span><br>
                             <span class='wind_speed'>Wind speed: <span></span></span><br>

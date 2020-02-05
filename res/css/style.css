@@ -1,0 +1,307 @@
+*{
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	color:#aaa;
+	margin:auto;
+	min-width:660px;
+	max-width:1200px;
+	position: relative;
+	background: url(/res/img/green.jpg) no-repeat;
+	background-size: 100% 54px;
+	background-position: 0px 30px;
+}
+.header{
+	height: 150px;
+	width:100%;
+	text-align: center;
+	color: #262626;
+}
+.navbar {
+	overflow: hidden;
+	width: 100%;
+	padding: 30px 0 0 175px;
+	height: 84px;
+}
+.logo_nav {
+	position: absolute;
+	height: 105px;
+	width: 160px;
+	background:url(/res/img/logo_w.png) no-repeat;
+	background-size:140px 100px;
+	background-position:10px 0px;
+}
+
+.navbar a, .profile_button {
+	color: white;
+	padding: 16px 20px;
+	margin-right: 5px;
+	float: left;
+	text-decoration: none;
+	text-align: center;
+	font-size: 16px;
+	border-radius: 7px;
+	border: 2px solid #96ba1c;
+}
+
+.navbar a:hover {
+	background-color: #08702a;
+	color: white;
+}
+.content {
+	display: flex;
+	flex-wrap: wrap;
+}
+.map{
+	flex:60%;
+	background-color: #f1f1f1;
+	padding: 20px;
+	color: black;
+	text-align: center;
+}
+.profile_button {
+	position:absolute;
+	right:10px;
+	cursor:default;
+}
+
+.icons {
+	width: 75px;
+    height: 75px;
+}
+
+.graph {
+	text-align: center;
+	flex:40%;
+	width:400px;
+	background-color: #f1f1f1;
+	padding: 20px;
+}
+
+#sideheader{
+	color:  #047f31;
+}
+
+
+.prev_img{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ccc;
+}
+
+.land {
+	fill-opacity: 1;
+	stroke:white;
+	stroke-opacity: 1;
+	stroke-width:0.5;
+}
+
+.land:hover {
+	fill: #047f31;
+	cursor: pointer;
+}
+
+.land.active {
+	fill: #047f31;
+}
+
+.land2 {
+	fill-opacity: 1;
+	stroke:white;
+	stroke-opacity: 1;
+	stroke-width:1.5;
+}
+
+.land2:hover {
+	fill: #999999;
+	cursor: pointer;
+}
+
+.land2.active {
+	fill: #999999;
+	cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .row, .navbar {   
+	flex-direction: column;
+  }
+}
+
+.tooltip {
+    display: none;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: fixed;
+    z-index: 1;
+}
+
+.tooltip.active {
+   	display: initial;
+}
+
+.tab {
+	display : none;
+}
+
+#tabs {
+   width: 100%;
+   height: 34px;
+   /*border-bottom: solid 1px #CCC;*/
+   padding-right: 2px;
+   margin-top: 30px;
+}
+
+#tabs li {
+	float:left; 
+    list-style:none;
+    margin-right:5px; 
+}
+
+#tabs li a {
+    font-weight: bold; 
+    text-decoration:none;
+    color: #047f31;
+    border: 1px solid #b3b3b3; 
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    padding-top: 5px;
+    padding-left: 7px;
+   	padding-right: 7px;
+    padding-bottom: 7px; 
+    display:block; 
+    background: #FFF;
+}
+
+.tab li a.active{
+    background-color: #08702a;
+}
+
+
+#tabs li a:hover, #tabs li a.inactive:hover {
+	color: #08702a;
+}
+
+.graph button{
+	position: absolute;
+	right: 40px;
+	top: 570px;
+	color: white;
+	background-color: #96BA1C;
+	font-weight: bold; 
+	display:block;
+	padding-top: 9px;
+    padding-left: 9px;
+   	padding-right: 9px;
+    padding-bottom: 9px; 
+    border-radius: 9px;
+    border: 1px solid #b3b3b3;
+    cursor: pointer;
+}
+
+.weatherdata {
+	font-size: 22px;
+	text-align: left;
+}
+
+#weatherlocation{
+	color:  #047f31;
+}
+
+#weathertemperature{
+	color: black;
+	font-size: 60px;
+	line-height: 0px;
+	float: left;
+	padding-right: 20px;
+}
+
+#weatherpicture{
+	float: left;
+	width: 100px;
+}
+
+.weatherinfo{
+	float: left;
+	text-align: left;
+}
+
+.weatherinfo h3{
+	padding: 3px;
+    margin: 0px;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	min-width: 160px;
+	z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	color: black;
+	padding: 8px 10px;
+	text-decoration: none;
+	display: block;
+	margin:2px 0;
+	background-color: #f1f1f1;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;color:black}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: grid;
+	position: absolute;
+	right: 15px;
+	top: 84px;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.profile_table {
+	width:fit-content;
+	height:fit-content;
+	margin:auto;
+	border-collapse: collapse;
+}
+
+.table_row {
+	display:table-row;
+
+}
+
+.table_row > div:first-child {
+	padding:30px 100px 10px 40px;
+	font-weight: bold;
+}
+
+
+.table_row > div {
+	display:table-cell;
+	padding:30px 40px 10px 40px;
+	text-align: left;
+	border-bottom:1px solid #ddd;
+}

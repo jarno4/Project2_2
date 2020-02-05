@@ -1,7 +1,0 @@
-body, *:focus {outline:none;}
-.login_form {width: fit-content;margin:auto;padding:30px 75px;border: 1px solid red}
-.form_row {margin: 5px 0px 15px 0px;padding:10px 5px; height:38px;width:250px;font-size:14px;display: block;border:1px solid black;border-radius:2px;}
-.submit_button {display: inline-block;padding:5px 10px;border:1px solid black;border-radius:1px}
-.sign_up_link {display: inline-block}
-.login_form input {transition: box-shadow 0.5s ease;}
-.login_form input:hover, .login_form input:focus {transition: box-shadow 0.3s ease;box-shadow:black 0px 0px 4px 0px;}
